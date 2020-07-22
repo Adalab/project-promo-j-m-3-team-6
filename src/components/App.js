@@ -1,8 +1,22 @@
 import React from 'react';
-import '../stylesheets/_App.scss';
+import { Route, Switch } from 'react-router-dom';
+//import '../stylesheets/App.scss';
+import Landing from './Landing';
+//import '../stylesheets/Landing.scss';
+import Card from './Card';
 
-function App() {
-  return 'ruta para recoger landing y card';
+class AppLanding extends React.Component {
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path="/" component={Landing}></Route>
+          <Route path="/card" component={Card}></Route>
+        </Switch>
+        FOOOOOOOOTER
+      </div>
+    );
+  }
 }
 
-export default App;
+export default AppLanding;

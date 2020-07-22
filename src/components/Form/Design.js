@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Header extends React.Component {
+class Design extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return 'Header';
+    return 'Design';
   }
 }
 
-export default Header;
+export default Design;

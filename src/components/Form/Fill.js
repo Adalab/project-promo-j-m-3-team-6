@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Header extends React.Component {
+class Fill extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return 'Header';
+    return 'Fill';
   }
 }
 
-export default Header;
+export default Fill;

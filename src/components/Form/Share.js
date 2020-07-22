@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Header extends React.Component {
+class Share extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    return 'Header';
+    return 'Share';
   }
 }
 
-export default Header;
+export default Share;
