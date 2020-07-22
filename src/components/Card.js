@@ -4,7 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import '../stylesheets/_App.scss';
 
-class App extends React.Component {
+class Card extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -20,4 +20,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Card;

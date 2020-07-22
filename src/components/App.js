@@ -5,7 +5,7 @@ import Landing from './Landing';
 //import '../stylesheets/Landing.scss';
 import Card from './Card';
 
-class AppLanding extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -13,10 +13,9 @@ class AppLanding extends React.Component {
           <Route exact path="/" component={Landing}></Route>
           <Route path="/card" component={Card}></Route>
         </Switch>
-        FOOOOOOOOTER
       </div>
     );
   }
 }
 
-export default AppLanding;
+export default App;

@@ -7,7 +7,11 @@ class Landing extends React.Component {
   }
 
   render() {
-    return 'Landing';
+    return (
+      <div>
+        <Footer />
+      </div>
+    );
   }
 }
 
