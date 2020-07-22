@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../images/Logo-Gryffincode.png';
+import '../stylesheets/layout/_footer.scss';
 
 class Footer extends React.Component {
   constructor(props) {

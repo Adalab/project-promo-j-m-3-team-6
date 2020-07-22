@@ -1,0 +1,118 @@
+.page-index {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media all and (min-width: 768px) {
+    justify-content: space-evenly;
+  }
+}
+
+.main-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  background-color: #f5f5f5;
+  height: 90vh;
+  width: 100%;
+  padding: 0px 35px 0px 35px;
+
+  & img {
+    margin-top: 95px;
+    width: 250px;
+    @media all and (min-width: 768px) {
+      width: 419px;
+      margin-top: 350px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+
+  & h1 {
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: $color-primary;
+    padding-top: 35.4px;
+    line-height: normal;
+
+    @media all and (min-width: 768px) {
+      font-size: 1.5rem;
+      padding-top: 31px;
+    }
+  }
+  & p {
+    font-family: $font-primary;
+    font-size: 0.8rem;
+    line-height: normal;
+    color: $color-p1-primary-dark;
+    width: 268px;
+    @media all and (min-width: 768px) {
+      font-size: 1rem;
+      width: 331px;
+    }
+  }
+}
+
+.steps-landing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: solid 1.6px rgba(225, 115, 52, 0.21);
+  border-radius: 4px;
+  width: 268px;
+  height: 73.8px;
+  margin-top: 17.8px;
+  @media all and (min-width: 768px) {
+    width: 325px;
+    height: 86px;
+  }
+  & div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  & .icon-landing {
+    font-size: 1.4rem;
+    color: $color-primary;
+    @media all and (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+  }
+  & .text-landing {
+    font-size: 0.8rem;
+    color: $color-text-primary;
+    @media all and (min-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.button-start {
+  font-size: 1rem;
+  color: $color-light;
+  background-color: $color-p1-primary;
+  border-radius: 21px;
+  text-align: center;
+  width: 129px;
+  height: 42px;
+  margin-bottom: 30px;
+  margin-top: 38.6px;
+  line-height: 2.5;
+  a {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  transition: background-color 0.5s ease;
+  box-shadow: none;
+  outline: none;
+  &:hover {
+    background-color: #7c1313;
+  }
+  @media all and (min-width: 768px) {
+    margin-top: 186px;
+    margin-bottom: 59px;
+  }
+}
