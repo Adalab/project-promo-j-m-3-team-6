@@ -1,8 +1,17 @@
-// Core
-@import './core/variables';
-@import './core/reset';
-@import './core/mixins';
+// // Core
+// // @import './core/variables';
+// @import './core/reset';
+// @import './core/mixins';
 
+//Core
+@import 'core/variables';
+@import 'core/reset';
+@import 'core/mixins';
 // Layout
-@import './layout/header';
-@import './layout/footer';
+@import 'layout/header';
+@import 'layout/card';
+@import 'layout/form';
+@import 'layout/design';
+@import 'layout/fillOut';
+@import 'layout/share';
+@import 'layout/footer';
