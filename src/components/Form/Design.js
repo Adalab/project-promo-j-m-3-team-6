@@ -3,10 +3,12 @@ import React from 'react';
 class Design extends React.Component {
   constructor(props) {
     super(props);
-    this.collapsibleHandlerChild = this.collapsibleHandlerChild.bind(this);
+    this.clickHandlerChild = this.clickHandlerChild.bind(this);
   }
-  collapsibleHandlerChild(event) {
+  clickHandlerChild(event) {
     this.props.collapsibleHandler(event.currentTarget);
+    this.props.arrowHandler(event.currentTarget);
+    console.log(event);
   }
 
   render() {
@@ -15,13 +17,13 @@ class Design extends React.Component {
       <div className="box__design">
         <div
           className="design__menu js-arrow arrow"
-          onClick={this.collapsibleHandlerChild}
+          onClick={this.clickHandlerChild}
         >
           <div className="content__title">
             <i className="icon far fa-object-ungroup"></i>
             <h2 className="titleMenu">Diseña</h2>
           </div>
-          <i className="fa fa-chevron-down js-arrowsTransform"></i>
+          <i className="fa fa-chevron-down js-arrowsTransform transform"></i>
         </div>
         <div className="design__content js-hidden ">
           <h3 className="design__content__title">colores</h3>

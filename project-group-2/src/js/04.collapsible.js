@@ -1,6 +1,7 @@
 // COLLAPSIBLE SECTIONS
+//arrows
 const arrowsTransform = document.querySelectorAll('.js-arrowsTransform');
-
+//section
 const collapsibleHidden = document.querySelectorAll('.js-hidden');
 
 function changeCollapsible() {
