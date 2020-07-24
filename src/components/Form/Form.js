@@ -42,11 +42,14 @@ class Form extends React.Component {
           arrowHandler={this.arrowHandler}
         />
 
-        <Fill collapsibleHandler={this.collapsibleHandler} />
+        <Fill
+          collapsibleHandler={this.collapsibleHandler}
+          arrowHandler={this.arrowHandler}
+        />
 
         <Share
           collapsibleHandler={this.collapsibleHandler}
-          clickHandler={this.props.clickHandler}
+          arrowHandler={this.arrowHandler}
         />
       </form>
     );

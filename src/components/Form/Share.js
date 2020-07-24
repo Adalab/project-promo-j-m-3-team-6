@@ -3,25 +3,24 @@ import React from 'react';
 class Share extends React.Component {
   constructor(props) {
     super(props);
-    this.getClickChild = this.getClickChild.bind(this);
-    this.collapsibleHandlerChild = this.collapsibleHandlerChild.bind(this);
+    // this.getClickChild = this.getClickChild.bind(this);
+    this.clickHandlerChild = this.clickHandlerChild.bind(this);
   }
-
-  getClickChild(evt) {
-    this.props.clickHandler(evt.target);
-  }
-  collapsibleHandlerChild(event) {
+  // ejemplo de maría
+  // getClickChild(evt) {
+  //   this.props.clickHandler(evt.target);
+  // }
+  clickHandlerChild(event) {
     this.props.collapsibleHandler(event.currentTarget);
+    this.props.arrowHandler(event.currentTarget);
+    console.log(event);
   }
 
   render() {
     console.log(this.props);
     return (
       <div className="box__share">
-        <div
-          className="share__menu js-arrow"
-          onClick={this.collapsibleHandlerChild}
-        >
+        <div className="share__menu js-arrow" onClick={this.clickHandlerChild}>
           <div className="content__title">
             <i className="icon fas fa-share-alt"></i>
             <h2 className="titleMenu">comparte</h2>
@@ -41,7 +40,9 @@ class Share extends React.Component {
           </button>
         </div>
         <div className="text__share js-textShare">
-          <h5 className="text__share__create">La tarjeta ha sido creada:</h5>
+          <h5 className="text__share__create hidden">
+            La tarjeta ha sido creada:
+          </h5>
           <button
             className="text__share__link js-linkShare"
             href="#"
