@@ -119,4 +119,10 @@
 .profile__image {
   width: 240px;
   height: 200px;
+
+  & img {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+  }
 }

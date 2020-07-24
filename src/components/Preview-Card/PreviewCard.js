@@ -1,11 +1,8 @@
 import React from 'react';
+import Logo from '../../images/Logo-Gryffincode.png';
 import '../../stylesheets/_App.scss';
 
 class PreviewCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <section className="section__card preview__section">
@@ -20,7 +17,9 @@ class PreviewCard extends React.Component {
                 Front-end developer
               </h3>
             </div>
-            <div className="profile__image js__profile-image"></div>
+            <div className="profile__image js__profile-image">
+              <img src={Logo}></img>
+            </div>
             <div>
               <ul className="social__links">
                 <li>
@@ -44,6 +43,7 @@ class PreviewCard extends React.Component {
                     className="social__button linkedin js-linkedin"
                     href="https://www.linkedin.com/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="fab fa-linkedin-in"></i>
                   </a>
@@ -53,6 +53,7 @@ class PreviewCard extends React.Component {
                     className="social__button github js-github"
                     href="https://github.com/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <i className="fab fa-github-alt"></i>
                   </a>
