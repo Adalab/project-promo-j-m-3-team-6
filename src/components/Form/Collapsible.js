@@ -6,7 +6,7 @@ class Collapsible extends React.Component {
   }
 
   render() {
-    return <div className="collapsible">{this.props.children}</div>;
+    return <>{this.props.children}</>;
   }
 }
 

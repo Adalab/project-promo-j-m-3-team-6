@@ -8,7 +8,7 @@ class PreviewCard extends React.Component {
 
   render() {
     return (
-      <section className="preview__section">
+      <section className="section__card preview__section">
         <div className="preview__container">
           <button className="button__reset js-reset" type="submit">
             <i className="far fa-trash-alt"></i>Reset

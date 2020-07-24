@@ -19,8 +19,12 @@ class Card extends React.Component {
     return (
       <div>
         <Header />
-        <Form clickHandler={this.getClick} />
-        <PreviewCard />
+        <main className="main">
+          <div className="wrapper">
+            <PreviewCard />
+            <Form clickHandler={this.getClick} />
+          </div>
+        </main>
         <Footer />
       </div>
     );
