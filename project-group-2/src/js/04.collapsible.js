@@ -1,28 +1,13 @@
 // COLLAPSIBLE SECTIONS
-const arrowTransform1 = document.querySelector('.js-arrowTransform1');
-const arrowTransform2 = document.querySelector('.js-arrowTransform2');
-const arrowTransform3 = document.querySelector('.js-arrowTransform3');
-const arrow1 = document.querySelector('.js-arrow1');
-const arrow2 = document.querySelector('.js-arrow2');
-const arrow3 = document.querySelector('.js-arrow3');
-const collapsible = document.querySelector('.js-collapsed');
-const collapsibleHidden1 = document.querySelector('.js-hidden1');
-const collapsibleHidden2 = document.querySelector('.js-hidden2');
-const collapsibleHidden3 = document.querySelector('.js-hidden3');
+const arrowsTransform = document.querySelectorAll('.js-arrowsTransform');
 
-function changeCollapsible1() {
-  collapsibleHidden1.classList.toggle('hidden');
-  arrowTransform1.classList.toggle('transform');
-}
-function changeCollapsible2() {
-  collapsibleHidden2.classList.toggle('hidden');
-  arrowTransform2.classList.toggle('transform');
-}
-function changeCollapsible3() {
-  collapsibleHidden3.classList.toggle('hidden');
-  arrowTransform3.classList.toggle('transform');
+const collapsibleHidden = document.querySelectorAll('.js-hidden');
+
+function changeCollapsible() {
+  collapsibleHidden.classList.toggle('hidden');
+  arrowsTransform.classList.toggle('transform');
 }
 
-arrow1.addEventListener('click', changeCollapsible1);
-arrow2.addEventListener('click', changeCollapsible2);
-arrow3.addEventListener('click', changeCollapsible3);
+const arrows = document.querySelectorAll('.js-arrow');
+
+arrows.forEach((arrow) => arrow.addEventListener('click', changeCollapsible));

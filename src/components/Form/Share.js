@@ -14,14 +14,14 @@ class Share extends React.Component {
     console.log(this.props);
     return (
       <div className="box__share">
-        <div className="share__menu js-arrow3">
+        <div className="share__menu js-arrow">
           <div className="content__title">
             <i className="icon fas fa-share-alt"></i>
             <h2 className="titleMenu">comparte</h2>
           </div>
-          <i className="fa fa-chevron-down js-arrowTransform3"></i>
+          <i className="fa fa-chevron-down js-arrowsTransform"></i>
         </div>
-        <div className="share__content js-hidden3 hidden">
+        <div className="share__content js-hidden hidden">
           <button
             type="submit"
             name="share"
