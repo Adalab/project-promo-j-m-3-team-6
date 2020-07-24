@@ -3,12 +3,19 @@ import React from 'react';
 class Fill extends React.Component {
   constructor(props) {
     super(props);
+    this.collapsibleHandlerChild = this.collapsibleHandlerChild.bind(this);
+  }
+  collapsibleHandlerChild(event) {
+    this.props.collapsibleHandler(event.currentTarget);
   }
 
   render() {
     return (
       <div className="fillOut">
-        <div className="fillOut__title js-arrow">
+        <div
+          className="fillOut__title js-arrow"
+          onClick={this.collapsibleHandlerChild}
+        >
           <div className="content__title">
             <i className="fa fa-keyboard-o" aria-hidden="true"></i>
             <h2 className="text">Rellena</h2>

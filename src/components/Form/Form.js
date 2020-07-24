@@ -9,8 +9,17 @@ class Form extends React.Component {
     super(props);
     this.collapsibleHandler = this.collapsibleHandler.bind(this);
   }
-  collapsibleHandler() {
-    console.log('collapse me');
+  collapsibleHandler(currentCollapsible) {
+    console.log(currentCollapsible);
+    // const arrowsTransform = document.querySelectorAll('.js-arrowsTransform');
+    const collapsibleContent = document.querySelectorAll('.js-hidden');
+
+    collapsibleContent.forEach((collapsible) => {
+      collapsible.classList.add('hidden');
+    });
+    currentCollapsible.nextSibling.classList.remove('hidden');
+    // falta hacer lo de las flechas que funcionan algo parecido
+    // arrowsTransform.forEach((arrow) => arrow.classList.toggle('transform'));
   }
   render() {
     console.log('Form');
@@ -22,7 +31,10 @@ class Form extends React.Component {
 
         <Fill collapsibleHandler={this.collapsibleHandler} />
 
-        <Share clickHandler={this.props.clickHandler} />
+        <Share
+          collapsibleHandler={this.collapsibleHandler}
+          clickHandler={this.props.clickHandler}
+        />
       </form>
     );
   }

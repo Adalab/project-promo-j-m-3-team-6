@@ -4,17 +4,24 @@ class Share extends React.Component {
   constructor(props) {
     super(props);
     this.getClickChild = this.getClickChild.bind(this);
+    this.collapsibleHandlerChild = this.collapsibleHandlerChild.bind(this);
   }
 
   getClickChild(evt) {
     this.props.clickHandler(evt.target);
+  }
+  collapsibleHandlerChild(event) {
+    this.props.collapsibleHandler(event.currentTarget);
   }
 
   render() {
     console.log(this.props);
     return (
       <div className="box__share">
-        <div className="share__menu js-arrow">
+        <div
+          className="share__menu js-arrow"
+          onClick={this.collapsibleHandlerChild}
+        >
           <div className="content__title">
             <i className="icon fas fa-share-alt"></i>
             <h2 className="titleMenu">comparte</h2>
