@@ -11,6 +11,7 @@ class Form extends React.Component {
 
   render() {
     console.log('Form');
+    console.log(this.props);
     return (
       <div>
         <Collapsible>
@@ -20,7 +21,7 @@ class Form extends React.Component {
           <Fill />
         </Collapsible>
         <Collapsible>
-          <Share />
+          <Share clickHandler={this.props.clickHandler} />
         </Collapsible>
       </div>
     );
