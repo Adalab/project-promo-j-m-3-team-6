@@ -1,5 +1,3 @@
-'use strict';
-
 // COLLAPSIBLE SECTIONS
 const arrowTransform1 = document.querySelector('.js-arrowTransform1');
 const arrowTransform2 = document.querySelector('.js-arrowTransform2');
@@ -11,7 +9,6 @@ const collapsible = document.querySelector('.js-collapsed');
 const collapsibleHidden1 = document.querySelector('.js-hidden1');
 const collapsibleHidden2 = document.querySelector('.js-hidden2');
 const collapsibleHidden3 = document.querySelector('.js-hidden3');
-
 
 function changeCollapsible1() {
   collapsibleHidden1.classList.toggle('hidden');

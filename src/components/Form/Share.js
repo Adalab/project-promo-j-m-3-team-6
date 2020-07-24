@@ -21,7 +21,7 @@ class Share extends React.Component {
           </div>
           <i className="fa fa-chevron-down js-arrowTransform3"></i>
         </div>
-        <div className="share__content js-hidden3 ">
+        <div className="share__content js-hidden3 hidden">
           <button
             type="submit"
             name="share"
@@ -41,7 +41,7 @@ class Share extends React.Component {
             target="_blank"
           ></button>
           <button
-            className="twitter-share-button text__share__button js-twitter"
+            className="twitter-share-button text__share__button js-twitter hidden"
             href="https://twitter.com/share?="
             data-size="large"
             data-text="custom share text"

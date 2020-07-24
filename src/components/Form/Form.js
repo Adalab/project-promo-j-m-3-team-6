@@ -12,6 +12,7 @@ class Form extends React.Component {
   render() {
     console.log('Form');
     console.log(this.props);
+
     return (
       <form className="form">
         <Collapsible>
