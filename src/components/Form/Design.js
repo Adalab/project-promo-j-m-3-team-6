@@ -23,7 +23,7 @@ class Design extends React.Component {
             <i className="icon far fa-object-ungroup"></i>
             <h2 className="titleMenu">Diseña</h2>
           </div>
-          <i className="fa fa-chevron-down js-arrowsTransform transform"></i>
+          <i className="fa fa-chevron-down js-arrowsTransform "></i>
         </div>
         <div className="design__content js-hidden ">
           <h3 className="design__content__title">colores</h3>

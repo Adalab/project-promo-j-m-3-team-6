@@ -25,7 +25,7 @@ class Share extends React.Component {
             <i className="icon fas fa-share-alt"></i>
             <h2 className="titleMenu">comparte</h2>
           </div>
-          <i className="fa fa-chevron-down js-arrowsTransform"></i>
+          <i className="fa fa-chevron-down js-arrowsTransform transform"></i>
         </div>
         <div className="share__content js-hidden hidden">
           <button

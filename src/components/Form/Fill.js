@@ -24,7 +24,7 @@ class Fill extends React.Component {
             <h2 className="text">Rellena</h2>
           </div>
           <i
-            className="fa fa-chevron-down js-arrowsTransform"
+            className="fa fa-chevron-down js-arrowsTransform transform"
             aria-hidden="true"
           ></i>
         </div>
