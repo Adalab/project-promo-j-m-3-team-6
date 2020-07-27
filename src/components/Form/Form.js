@@ -36,7 +36,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form className="form">
+      <form className='form'>
         <Design
           collapsibleHandler={this.collapsibleHandler}
           arrowHandler={this.arrowHandler}

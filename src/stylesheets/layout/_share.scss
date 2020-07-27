@@ -64,6 +64,9 @@
       font-size: 18px;
       background-color: #7c1313;
     }
+    & .far {
+      margin-right: 7px;
+    }
   }
 }
 
@@ -79,6 +82,11 @@
   margin-bottom: 30px;
   cursor: default;
   outline: none;
+  &:hover {
+    font-weight: normal;
+    font-size: inherit;
+    background-color: rgb(184, 184, 184);
+  }
 }
 
 .text__share {
