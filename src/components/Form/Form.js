@@ -12,9 +12,7 @@ class Form extends React.Component {
   }
   collapsibleHandler(currentCollapsible) {
     // console.log(currentCollapsible);
-
     const collapsibleContent = document.querySelectorAll('.js-hidden');
-
     collapsibleContent.forEach((collapsible) => {
       collapsible.classList.add('hidden');
     });
@@ -36,7 +34,7 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form className='form'>
+      <form className="form">
         <Design
           collapsibleHandler={this.collapsibleHandler}
           arrowHandler={this.arrowHandler}

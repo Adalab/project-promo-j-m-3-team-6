@@ -6,15 +6,6 @@ import PreviewCard from './Preview-Card/PreviewCard';
 import '../stylesheets/_App.scss';
 
 class Card extends React.Component {
-  constructor(props) {
-    super(props);
-    this.getClick = this.getClick.bind(this);
-  }
-
-  getClick(evt) {
-    console.log('he hecho click', evt);
-  }
-
   render() {
     return (
       <div>
@@ -22,7 +13,7 @@ class Card extends React.Component {
         <main className="main">
           <div className="wrapper">
             <PreviewCard />
-            <Form clickHandler={this.getClick} />
+            <Form />
           </div>
         </main>
         <Footer />
