@@ -3,10 +3,6 @@ import Logo from '../images/logo-awesome-profile-cards.svg';
 import '../stylesheets/layout/_landingMain.scss';
 
 class LandingMain extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <main className="main-landing">
