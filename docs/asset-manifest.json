@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.adde6a2d.chunk.css",
+    "main.js": "./static/js/main.b22e1461.chunk.js",
+    "main.js.map": "./static/js/main.b22e1461.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.0bc4a3e2.js",
+    "runtime-main.js.map": "./static/js/runtime-main.0bc4a3e2.js.map",
+    "static/js/2.ec08af08.chunk.js": "./static/js/2.ec08af08.chunk.js",
+    "static/js/2.ec08af08.chunk.js.map": "./static/js/2.ec08af08.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.e6911e1d1cc9876707efaf6c68a49df4.js": "./precache-manifest.e6911e1d1cc9876707efaf6c68a49df4.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.adde6a2d.chunk.css.map": "./static/css/main.adde6a2d.chunk.css.map",
+    "static/js/2.ec08af08.chunk.js.LICENSE.txt": "./static/js/2.ec08af08.chunk.js.LICENSE.txt",
+    "static/media/Logo-Gryffincode.png": "./static/media/Logo-Gryffincode.915dc9a4.png",
+    "static/media/logo-awesome-profile-cards.svg": "./static/media/logo-awesome-profile-cards.0118e311.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0bc4a3e2.js",
+    "static/js/2.ec08af08.chunk.js",
+    "static/css/main.adde6a2d.chunk.css",
+    "static/js/main.b22e1461.chunk.js"
+  ]
+}
