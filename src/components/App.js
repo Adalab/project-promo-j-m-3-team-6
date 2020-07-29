@@ -10,8 +10,8 @@ class App extends React.Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/" component={Landing}></Route>
-          <Route path="/card" component={Card}></Route>
+          <Route exact path='/' component={Landing}></Route>
+          <Route path='/card' component={Card}></Route>
         </Switch>
       </div>
     );

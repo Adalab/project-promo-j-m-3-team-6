@@ -22,22 +22,23 @@ class Form extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
-      <form className="form">
+      <form className='form'>
         <Design
-          id="collapsible-1"
+          id='collapsible-1'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
         />
 
         <Fill
-          id="collapsible-2"
+          id='collapsible-2'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
         />
 
         <Share
-          id="collapsible-3"
+          id='collapsible-3'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
         />
