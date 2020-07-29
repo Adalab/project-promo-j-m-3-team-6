@@ -5,27 +5,33 @@ class Design extends React.Component {
     super(props);
     this.clickHandlerChild = this.clickHandlerChild.bind(this);
   }
-  clickHandlerChild(event) {
-    this.props.collapsibleHandler(event.currentTarget);
-    this.props.arrowHandler(event.currentTarget);
-    console.log(event);
+  clickHandlerChild(ev) {
+    this.props.collapsibleHandler(ev);
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="box__design">
         <div
           className="design__menu js-arrow arrow"
+          id={this.props.id}
           onClick={this.clickHandlerChild}
         >
           <div className="content__title">
             <i className="icon far fa-object-ungroup"></i>
             <h2 className="titleMenu">Diseña</h2>
           </div>
-          <i className="fa fa-chevron-down js-arrowsTransform "></i>
+          <i
+            className={`fa fa-chevron-down js-arrowsTransform ${
+              this.props.isOpen === this.props.id ? '' : 'transform'
+            }`}
+          ></i>
         </div>
-        <div className="design__content js-hidden ">
+        <div
+          className={`design__content js-hidden ${
+            this.props.isOpen === this.props.id ? '' : 'hidden'
+          }`}
+        >
           <h3 className="design__content__title">colores</h3>
           <div className="design__content__form">
             <label htmlFor="color1">

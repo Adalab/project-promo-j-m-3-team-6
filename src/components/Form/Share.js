@@ -6,24 +6,33 @@ class Share extends React.Component {
     this.clickHandlerChild = this.clickHandlerChild.bind(this);
   }
 
-  clickHandlerChild(event) {
-    this.props.collapsibleHandler(event.currentTarget);
-    this.props.arrowHandler(event.currentTarget);
-    console.log(event);
+  clickHandlerChild(ev) {
+    this.props.collapsibleHandler(ev);
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="box__share">
-        <div className="share__menu js-arrow" onClick={this.clickHandlerChild}>
+        <div
+          className="share__menu js-arrow"
+          id={this.props.id}
+          onClick={this.clickHandlerChild}
+        >
           <div className="content__title">
             <i className="icon fas fa-share-alt"></i>
             <h2 className="titleMenu">comparte</h2>
           </div>
-          <i className="fa fa-chevron-down js-arrowsTransform transform"></i>
+          <i
+            className={`fa fa-chevron-down js-arrowsTransform ${
+              this.props.isOpen === this.props.id ? '' : 'transform'
+            }`}
+          ></i>
         </div>
-        <div className="share__content js-hidden hidden">
+        <div
+          className={`share__content js-hidden ${
+            this.props.isOpen === this.props.id ? '' : 'hidden'
+          }`}
+        >
           <button
             type="submit"
             name="share"

@@ -8,46 +8,38 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.collapsibleHandler = this.collapsibleHandler.bind(this);
-    this.arrowHandler = this.arrowHandler.bind(this);
+    this.state = { isOpen: 'collapsible-1' };
+    /*we store the clicked collapsible in state with a default as the first collapsible to be open on page load*/
   }
-  collapsibleHandler(currentCollapsible) {
-    // console.log(currentCollapsible);
-    const collapsibleContent = document.querySelectorAll('.js-hidden');
-    collapsibleContent.forEach((collapsible) => {
-      collapsible.classList.add('hidden');
-    });
-    currentCollapsible.nextSibling.classList.remove('hidden');
-  }
-
-  arrowHandler(currentArrow) {
-    console.log('current arrow', currentArrow);
-    const arrowsTransform = document.querySelectorAll('.js-arrowsTransform');
-    console.log('arrowsTransform', arrowsTransform);
-    // falta hacer lo de las flechas que funcionan algo parecido
-    arrowsTransform.forEach((arrow) => {
-      arrow.classList.add('transform');
-      console.log(arrow);
-    });
-    currentArrow.lastChild.classList.remove('transform');
-    console.log(currentArrow.lastChild);
+  collapsibleHandler(ev) {
+    /*this opens the clicked collapsible*/
+    if (ev.currentTarget.id !== this.state.activeCollapsible) {
+      this.setState({ isOpen: ev.currentTarget.id });
+    } else {
+      /*this closes the clicked collapsible*/
+      this.setState({ isOpen: '' });
+    }
   }
 
   render() {
     return (
       <form className="form">
         <Design
+          id="collapsible-1"
           collapsibleHandler={this.collapsibleHandler}
-          arrowHandler={this.arrowHandler}
+          isOpen={this.state.isOpen}
         />
 
         <Fill
+          id="collapsible-2"
           collapsibleHandler={this.collapsibleHandler}
-          arrowHandler={this.arrowHandler}
+          isOpen={this.state.isOpen}
         />
 
         <Share
+          id="collapsible-3"
           collapsibleHandler={this.collapsibleHandler}
-          arrowHandler={this.arrowHandler}
+          isOpen={this.state.isOpen}
         />
       </form>
     );

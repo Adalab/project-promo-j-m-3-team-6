@@ -6,10 +6,8 @@ class Fill extends React.Component {
     this.clickHandlerChild = this.clickHandlerChild.bind(this);
   }
 
-  clickHandlerChild(event) {
-    this.props.collapsibleHandler(event.currentTarget);
-    this.props.arrowHandler(event.currentTarget);
-    console.log(event);
+  clickHandlerChild(ev) {
+    this.props.collapsibleHandler(ev);
   }
 
   render() {
@@ -17,6 +15,7 @@ class Fill extends React.Component {
       <div className="fillOut">
         <div
           className="fillOut__title js-arrow"
+          id={this.props.id}
           onClick={this.clickHandlerChild}
         >
           <div className="content__title">
@@ -24,11 +23,17 @@ class Fill extends React.Component {
             <h2 className="text">Rellena</h2>
           </div>
           <i
-            className="fa fa-chevron-down js-arrowsTransform transform"
+            className={`fa fa-chevron-down js-arrowsTransform ${
+              this.props.isOpen === this.props.id ? '' : 'transform'
+            }`}
             aria-hidden="true"
           ></i>
         </div>
-        <div className="fillOut__form js-hidden hidden">
+        <div
+          className={`fillOut__form js-hidden ${
+            this.props.isOpen === this.props.id ? '' : 'hidden'
+          }`}
+        >
           <div className="item">
             <label htmlFor="name">
               Nombre completo
