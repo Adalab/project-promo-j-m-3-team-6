@@ -10,7 +10,7 @@ class Card extends React.Component {
     super(props);
     this.objectHandler = this.objectHandler.bind(this);
     this.state = {
-      palette: '',
+      palette: '1',
       name: '',
       job: '',
       email: '',
@@ -21,14 +21,21 @@ class Card extends React.Component {
   }
   objectHandler(event) {
     console.log(event.currentTarget.value);
+    const value = event.currentTarget.value;
+    const stateAttribute = event.currentTarget.id;
+    const newState = {};
+
+    newState[stateAttribute] = value;
+    console.log(newState);
+    this.setState(newState);
   }
   render() {
     console.log(this.props);
     return (
       <div>
         <Header />
-        <main className='main'>
-          <div className='wrapper'>
+        <main className="main">
+          <div className="wrapper">
             <PreviewCard />
             <Form objectHandler={this.objectHandler} objectInfo={this.state} />
           </div>
