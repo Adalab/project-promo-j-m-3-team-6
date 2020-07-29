@@ -15,6 +15,10 @@ class Design extends React.Component {
     this.props.objectHandler(event);
   }
 
+  handleCardUpdate(data) {
+    this.setState({});
+  }
+
   render() {
     console.log(this.props);
     return (

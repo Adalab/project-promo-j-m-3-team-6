@@ -9,16 +9,31 @@ class Card extends React.Component {
   constructor(props) {
     super(props);
     this.objectHandler = this.objectHandler.bind(this);
+    this.sendData = this.sendData.bind(this);
+
     this.state = {
-      palette: '1',
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: '',
+      userData: {
+        palette: '1',
+        name: '',
+        job: '',
+        email: '',
+        phone: '',
+        linkedin: '',
+        github: '',
+      },
     };
   }
+
+  handleCardUpdate(data) {
+    this.setState({
+      userData: data,
+    });
+  }
+
+  sendData(data) {
+    this.props.handleCardUpdate(data);
+  }
+
   objectHandler(event) {
     console.log(event.currentTarget.value);
     const value = event.currentTarget.value;
@@ -36,7 +51,7 @@ class Card extends React.Component {
         <Header />
         <main className="main">
           <div className="wrapper">
-            <PreviewCard />
+            <PreviewCard objectInfo={this.state} />
             <Form objectHandler={this.objectHandler} objectInfo={this.state} />
           </div>
         </main>
