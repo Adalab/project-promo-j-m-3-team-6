@@ -46,7 +46,7 @@ class Fill extends React.Component {
                 className="js-input-name"
                 id="name"
                 name="name"
-                placeholder="Ej: Jon Nieve"
+                placeholder="Ej: Hermione Granger"
                 required
                 onChange={this.objectHandlerChild}
               />
@@ -60,7 +60,7 @@ class Fill extends React.Component {
                 className="js-input-job"
                 id="job"
                 name="job"
-                placeholder="Ej: Night guard"
+                placeholder="Ej: Wizard"
                 onChange={this.objectHandlerChild}
                 required
               />
@@ -98,7 +98,7 @@ class Fill extends React.Component {
                 className="js-input-mail"
                 id="email"
                 name="email"
-                placeholder="Ej: jon-nieve@gmail.com"
+                placeholder="Ej: la-hermi@gmail.com"
                 onChange={this.objectHandlerChild}
                 required
               />
@@ -126,7 +126,7 @@ class Fill extends React.Component {
                 className="js-input-linkedin"
                 id="linkedin"
                 name="linkedin"
-                placeholder="Ej: jon.nieve"
+                placeholder="Ej: hermione.granger"
                 onChange={this.objectHandlerChild}
                 required
               />
@@ -140,7 +140,7 @@ class Fill extends React.Component {
                 className="js-input-github"
                 id="github"
                 name="github"
-                placeholder="Ej: jon-nieve"
+                placeholder="Ej: hermione.granger"
                 onChange={this.objectHandlerChild}
                 required
               />
