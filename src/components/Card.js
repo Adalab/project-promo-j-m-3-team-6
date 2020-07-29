@@ -20,7 +20,7 @@ class Card extends React.Component {
     };
   }
   objectHandler(event) {
-    console.log(this.state);
+    console.log(event.currentTarget.value);
   }
   render() {
     console.log(this.props);

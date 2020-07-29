@@ -29,18 +29,24 @@ class Form extends React.Component {
           id='collapsible-1'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
+          objectHandler={this.props.objectHandler}
+          objectInfo={this.props.objectInfo}
         />
 
         <Fill
           id='collapsible-2'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
+          objectHandler={this.props.objectHandler}
+          objectInfo={this.props.objectInfo}
         />
 
         <Share
           id='collapsible-3'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
+          objectHandler={this.props.objectHandler}
+          objectInfo={this.props.objectInfo}
         />
       </form>
     );
