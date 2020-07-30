@@ -36,7 +36,7 @@ class Card extends React.Component {
         <Header />
         <main className="main">
           <div className="wrapper">
-            <PreviewCard />
+            <PreviewCard objectInfo={this.state} />
             <Form objectHandler={this.objectHandler} objectInfo={this.state} />
           </div>
         </main>

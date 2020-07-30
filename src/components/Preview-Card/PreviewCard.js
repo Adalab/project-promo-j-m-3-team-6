@@ -10,11 +10,15 @@ class PreviewCard extends React.Component {
           <button className="button__reset js-reset" type="submit">
             <i className="far fa-trash-alt"></i>Reset
           </button>
-          <article className="preview__card">
+          <article
+            className={`preview__card palette${this.props.objectInfo.palette}`}
+          >
             <div className="title">
-              <h2 className="title__name js-text-name">Nombre Apellido</h2>
+              <h2 className="title__name js-text-name">
+                {this.props.objectInfo.name || 'Nombre Apellidos'}
+              </h2>
               <h3 className="title__position js-text-job">
-                Front-end developer
+                {this.props.objectInfo.job || 'Front-end developer'}
               </h3>
             </div>
             <div className="profile__image js__profile-image">
