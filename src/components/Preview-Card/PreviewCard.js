@@ -28,7 +28,9 @@ class PreviewCard extends React.Component {
               <ul className="social__links">
                 <li>
                   <a
-                    className="social__button phone__icon js-number"
+                    className={`social__button phone__icon ${
+                      this.props.objectInfo.phone === '' ? 'opacity' : ''
+                    }`}
                     href={`tel:${this.props.objectInfo.phone}`}
                   >
                     <i className="fas fa-mobile-alt"></i>
@@ -36,7 +38,9 @@ class PreviewCard extends React.Component {
                 </li>
                 <li>
                   <a
-                    className="social__button buttonMail js-mail"
+                    className={`social__button buttonMail ${
+                      this.props.objectInfo.email === '' ? 'opacity' : ''
+                    }`}
                     href={`mailto:${this.props.objectInfo.email}`}
                   >
                     <i className="far fa-envelope"></i>
@@ -44,7 +48,9 @@ class PreviewCard extends React.Component {
                 </li>
                 <li>
                   <a
-                    className="social__button linkedin js-linkedin"
+                    className={`social__button linkedin ${
+                      this.props.objectInfo.linkedin === '' ? 'opacity' : ''
+                    }`}
                     href={`https://www.linkedin.com/${this.props.objectInfo.linkedin}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -54,7 +60,9 @@ class PreviewCard extends React.Component {
                 </li>
                 <li>
                   <a
-                    className="social__button github js-github"
+                    className={`social__button github ${
+                      this.props.objectInfo.github === '' ? 'opacity' : ''
+                    }`}
                     href={`https://github.com/${this.props.objectInfo.github}`}
                     target="_blank"
                     rel="noopener noreferrer"
