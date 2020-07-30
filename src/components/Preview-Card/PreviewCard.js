@@ -29,7 +29,7 @@ class PreviewCard extends React.Component {
                 <li>
                   <a
                     className="social__button phone__icon js-number"
-                    href="tel: 999999999"
+                    href={`tel:${this.props.objectInfo.phone}`}
                   >
                     <i className="fas fa-mobile-alt"></i>
                   </a>
@@ -37,7 +37,7 @@ class PreviewCard extends React.Component {
                 <li>
                   <a
                     className="social__button buttonMail js-mail"
-                    href="mailto: adalab@adalab.com"
+                    href={`mailto:${this.props.objectInfo.email}`}
                   >
                     <i className="far fa-envelope"></i>
                   </a>
@@ -45,7 +45,7 @@ class PreviewCard extends React.Component {
                 <li>
                   <a
                     className="social__button linkedin js-linkedin"
-                    href="https://www.linkedin.com/"
+                    href={`https://www.linkedin.com/${this.props.objectInfo.linkedin}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -55,7 +55,7 @@ class PreviewCard extends React.Component {
                 <li>
                   <a
                     className="social__button github js-github"
-                    href="https://github.com/"
+                    href={`https://github.com/${this.props.objectInfo.github}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
