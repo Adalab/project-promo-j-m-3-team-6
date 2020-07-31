@@ -13,6 +13,7 @@ class Card extends React.Component {
       palette: '1',
       name: '',
       job: '',
+      photo: '',
       email: '',
       phone: '',
       linkedin: '',
@@ -34,8 +35,8 @@ class Card extends React.Component {
     return (
       <div>
         <Header />
-        <main className="main">
-          <div className="wrapper">
+        <main className='main'>
+          <div className='wrapper'>
             <PreviewCard objectInfo={this.state} />
             <Form objectHandler={this.objectHandler} objectInfo={this.state} />
           </div>

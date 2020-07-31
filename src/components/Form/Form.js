@@ -3,11 +3,13 @@ import React from 'react';
 import Design from './Design';
 import Fill from './Fill';
 import Share from './Share';
+import GetAvatar from '../Preview-Card/GetAvatar';
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.collapsibleHandler = this.collapsibleHandler.bind(this);
+    this.uploadPhoto = this.uploadPhoto.bind(this);
     this.state = { isOpen: 'collapsible-1' };
     /*we store the clicked collapsible in state with a default as the first collapsible to be open on page load*/
   }
@@ -19,6 +21,10 @@ class Form extends React.Component {
       /*this closes the clicked collapsible*/
       this.setState({ isOpen: '' });
     }
+  }
+
+  uploadPhoto(ev) {
+    console.log('funciono');
   }
 
   render() {
@@ -39,6 +45,7 @@ class Form extends React.Component {
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
           objectInfo={this.props.objectInfo}
+          uploadPhoto={this.uploadPhoto}
         />
 
         <Share
