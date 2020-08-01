@@ -44,7 +44,7 @@ class GetAvatar extends Component {
           type="button"
           onClick={this.handleFilePicker}
         >
-          Get IMAGE!
+          Añadir imagen
         </button>
 
         <input
