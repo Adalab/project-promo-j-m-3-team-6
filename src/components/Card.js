@@ -19,11 +19,9 @@ class Card extends React.Component {
       phone: '',
       linkedin: '',
       github: '',
-      image: {
-        isAvatarDefault: true,
-        profile: {
-          avatar: defaultImage,
-        },
+      isAvatarDefault: true,
+      profile: {
+        avatar: defaultImage,
       },
     };
   }
@@ -40,8 +38,12 @@ class Card extends React.Component {
   updateAvatar(img) {
     const { profile } = this.state;
     this.setState((prevState) => {
+      const newProfile = { ...profile, avatar: img };
+
       return {
+        profile: newProfile,
         photo: img,
+        isAvatarDefault: false,
       };
     });
     console.log(this.state);
@@ -49,12 +51,12 @@ class Card extends React.Component {
 
   render() {
     console.log(this.props);
-    const { profile, isAvatarDefault } = this.state.image;
+    const { profile, isAvatarDefault } = this.state;
     return (
       <div>
         <Header />
-        <main className='main'>
-          <div className='wrapper'>
+        <main className="main">
+          <div className="wrapper">
             <PreviewCard objectInfo={this.state} avatar={profile.avatar} />
             <Form
               objectHandler={this.objectHandler}
