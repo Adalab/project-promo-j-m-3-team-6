@@ -80,6 +80,9 @@ class Fill extends React.Component {
                 <GetAvatar
                   photo={this.props.objectInfo.photo}
                   uploadPhoto={this.props.uploadPhoto}
+                  avatar={this.props.avatar}
+                  isAvatarDefault={this.props.isAvatarDefault}
+                  updateAvatar={this.props.updateAvatar}
                 />
                 {/* <div className='action'>
                   <button

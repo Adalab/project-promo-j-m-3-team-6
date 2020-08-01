@@ -3,7 +3,6 @@ import React from 'react';
 import Design from './Design';
 import Fill from './Fill';
 import Share from './Share';
-import GetAvatar from '../Preview-Card/GetAvatar';
 
 class Form extends React.Component {
   constructor(props) {
@@ -46,6 +45,9 @@ class Form extends React.Component {
           objectHandler={this.props.objectHandler}
           objectInfo={this.props.objectInfo}
           uploadPhoto={this.uploadPhoto}
+          avatar={this.props.avatar}
+          isAvatarDefault={this.props.isAvatarDefault}
+          updateAvatar={this.props.updateAvatar}
         />
 
         <Share
