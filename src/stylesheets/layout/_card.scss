@@ -84,12 +84,6 @@
   word-break: break-all;
 }
 
-.card__photo {
-  width: 240px;
-  height: 200px;
-  object-fit: cover;
-}
-
 .social__links {
   display: flex;
   flex-direction: row;
@@ -114,7 +108,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid #ccc;
 }
 .profile__image {
   width: 240px;
@@ -127,4 +120,5 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: contain;
 }
