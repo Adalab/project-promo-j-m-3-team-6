@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../images/logo-awesome-profile-cards.svg';
 import '../stylesheets/layout/_landingMain.scss';
+import { Link } from 'react-router-dom';
 
 class LandingMain extends React.Component {
   render() {
@@ -35,9 +36,9 @@ class LandingMain extends React.Component {
             <span className='text-landing'>Comparte</span>
           </div>
         </article>
-        <a className='button-start' href='#/card' title='start'>
+        <Link to={'/card'} className='button-start' title='start'>
           COMENZAR
-        </a>
+        </Link>
       </main>
     );
   }
