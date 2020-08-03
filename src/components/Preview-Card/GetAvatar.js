@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './GetAvatar.css';
 import PropTypes from 'prop-types';
 
 class GetAvatar extends Component {
@@ -38,24 +37,24 @@ class GetAvatar extends Component {
     //hemos conseguido traer la función de uploadphoto pero tenemos que revisar clases y nombres de los componentes copiados
     const { isAvatarDefault, avatar } = this.props;
     return (
-      <div className="get-avatar">
+      <div className='get-avatar'>
         <button
-          className="get-avatar__trigger"
-          type="button"
+          className='get-avatar__trigger'
+          type='button'
           onClick={this.handleFilePicker}
         >
           Añadir imagen
         </button>
 
         <input
-          type="file"
+          type='file'
           ref={this.myFileField}
-          className="get-avatar__upload-field"
+          className='get-avatar__upload-field'
           onChange={this.uploadImage}
         />
 
         <div
-          className="get-avatar__preview"
+          className='get-avatar__preview'
           style={this.getPreview(isAvatarDefault, avatar)}
         ></div>
       </div>

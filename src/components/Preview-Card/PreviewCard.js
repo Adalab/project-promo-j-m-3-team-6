@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from '../../images/Logo-Gryffincode.png';
 import '../../stylesheets/_App.scss';
 
 class PreviewCard extends React.Component {
@@ -25,7 +24,9 @@ class PreviewCard extends React.Component {
             <div className='profile__image js__profile-image'>
               <div
                 className='profile__avatar'
-                style={{ backgroundImage: `url(${this.props.avatar})` }}
+                style={{
+                  backgroundImage: `url(${this.props.avatar})`,
+                }}
               ></div>
             </div>
             <div>
