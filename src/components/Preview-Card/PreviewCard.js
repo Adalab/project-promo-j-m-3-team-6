@@ -2,35 +2,43 @@ import React from 'react';
 import '../../stylesheets/_App.scss';
 
 class PreviewCard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     console.log(this.props);
     return (
-      <section className='section__card preview__section'>
-        <div className='preview__container'>
-          <button className='button__reset js-reset' type='submit'>
-            <i className='far fa-trash-alt'></i>Reset
+      <section className="section__card preview__section">
+        <div className="preview__container">
+          <button
+            className="button__reset js-reset"
+            type="submit"
+            onClick={this.props.resetAll}
+            value="Reset form"
+          >
+            <i className="far fa-trash-alt"></i>Reset
           </button>
           <article
             className={`preview__card palette${this.props.objectInfo.palette}`}
           >
-            <div className='title'>
-              <h2 className='title__name js-text-name'>
+            <div className="title">
+              <h2 className="title__name js-text-name">
                 {this.props.objectInfo.name || 'Nombre Apellidos'}
               </h2>
-              <h3 className='title__position js-text-job'>
+              <h3 className="title__position js-text-job">
                 {this.props.objectInfo.job || 'Front-end developer'}
               </h3>
             </div>
-            <div className='profile__image js__profile-image'>
+            <div className="profile__image js__profile-image">
               <div
-                className='profile__avatar'
+                className="profile__avatar"
                 style={{
-                  backgroundImage: `url(${this.props.avatar})`,
+                  backgroundImage: `url(${this.props.avatar}`,
                 }}
               ></div>
             </div>
             <div>
-              <ul className='social__links'>
+              <ul className="social__links">
                 <li>
                   <a
                     className={`social__button phone__icon ${
@@ -38,7 +46,7 @@ class PreviewCard extends React.Component {
                     }`}
                     href={`tel:${this.props.objectInfo.phone}`}
                   >
-                    <i className='fas fa-mobile-alt'></i>
+                    <i className="fas fa-mobile-alt"></i>
                   </a>
                 </li>
                 <li>
@@ -48,7 +56,7 @@ class PreviewCard extends React.Component {
                     }`}
                     href={`mailto:${this.props.objectInfo.email}`}
                   >
-                    <i className='far fa-envelope'></i>
+                    <i className="far fa-envelope"></i>
                   </a>
                 </li>
                 <li>
@@ -57,10 +65,10 @@ class PreviewCard extends React.Component {
                       this.props.objectInfo.linkedin === '' ? 'opacity' : ''
                     }`}
                     href={`https://www.linkedin.com/${this.props.objectInfo.linkedin}`}
-                    target='_blank'
-                    rel='noopener noreferrer'
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className='fab fa-linkedin-in'></i>
+                    <i className="fab fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li>
@@ -69,10 +77,10 @@ class PreviewCard extends React.Component {
                       this.props.objectInfo.github === '' ? 'opacity' : ''
                     }`}
                     href={`https://github.com/${this.props.objectInfo.github}`}
-                    target='_blank'
-                    rel='noopener noreferrer'
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <i className='fab fa-github-alt'></i>
+                    <i className="fab fa-github-alt"></i>
                   </a>
                 </li>
               </ul>
