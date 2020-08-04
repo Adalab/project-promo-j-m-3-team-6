@@ -36,44 +36,27 @@ class Card extends React.Component {
   validateInfo() {
     console.log(this.state.objectInfo);
     const { name, job, email, linkedin, github, photo } = this.state.objectInfo;
-    // console.log(name, job, email, linkedin, github);
     if (name && job && email && linkedin && github && photo) {
       return '';
     } else {
       return 'disabled';
     }
   }
-  // const userObject = this.state.objectInfo;
-  // for (const key in userObject) {
-  //   if (userObject[key] !== '') {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
 
   /* function that updates state with input values*/
   objectHandler(event) {
-    // console.log(event.currentTarget.value);
     const { value, id } = event.currentTarget;
-    // const value = event.currentTarget.value;
-    // const stateAttribute = event.currentTarget.id;
-    // const newState = {};
-    // newState[stateAttribute] = value;
-    // console.log(newState);
-    // this.setState({ objectInfo: newState });
-    // this.setState();}
-    // console.log({ [id]: value });
     this.setState((prevState) => {
       return { objectInfo: { ...prevState.objectInfo, [id]: value } };
     });
-    // console.log(this.state);
+    console.log(this.state);
   }
   updateAvatar(img) {
-    /* reworked this because photo was not properly updated before and the data was not getting to validation point upon clicking on comparte*/
+    /* reworked this because photo was not being properly updated before and the data was not getting to validation point upon clicking on comparte*/
     const { profile, objectInfo } = this.state;
     this.setState((prevState) => {
       const newProfile = { ...profile, avatar: img };
+      /*photo was being put in the wrong spot!*/
       const newObjectInfo = { ...objectInfo, photo: img };
       return {
         profile: newProfile,
@@ -85,7 +68,6 @@ class Card extends React.Component {
   }
 
   render() {
-    // console.log(this.state);
     const { profile, isAvatarDefault } = this.state;
     return (
       <div>

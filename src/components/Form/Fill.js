@@ -6,7 +6,6 @@ class Fill extends React.Component {
     super(props);
     this.clickHandlerChild = this.clickHandlerChild.bind(this);
     this.objectHandlerChild = this.objectHandlerChild.bind(this);
-    // this.uploadPhotoChild = this.uploadPhotoChild.bind(this);
   }
 
   clickHandlerChild(ev) {
@@ -15,10 +14,6 @@ class Fill extends React.Component {
   objectHandlerChild(event) {
     this.props.objectHandler(event);
   }
-
-  // uploadPhotoChild(ev) {
-  //   this.props.uploadPhoto(ev);
-  // }
 
   render() {
     console.log(this.props);
