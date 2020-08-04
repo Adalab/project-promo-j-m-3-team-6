@@ -17,6 +17,7 @@ class Fill extends React.Component {
 
   render() {
     console.log(this.props);
+    const { name, job, phone, email, github, linkedin } = this.props.objectInfo;
     return (
       <div className="fillOut">
         <div
@@ -51,6 +52,7 @@ class Fill extends React.Component {
                 placeholder="Ej: Hermione Granger"
                 required
                 onChange={this.objectHandlerChild}
+                value={name}
               />
             </label>
           </div>
@@ -65,6 +67,7 @@ class Fill extends React.Component {
                 placeholder="Ej: Wizard"
                 onChange={this.objectHandlerChild}
                 required
+                value={job}
               />
             </label>
           </div>
@@ -112,6 +115,7 @@ class Fill extends React.Component {
                 placeholder="Ej: la-hermi@gmail.com"
                 onChange={this.objectHandlerChild}
                 required
+                value={email}
               />
             </label>
           </div>
@@ -126,6 +130,7 @@ class Fill extends React.Component {
                 placeholder="Ej: 123456789"
                 pattern="[0-9]{9}"
                 onChange={this.objectHandlerChild}
+                value={phone}
               />
             </label>
           </div>
@@ -140,6 +145,7 @@ class Fill extends React.Component {
                 placeholder="Ej: hermione.granger"
                 onChange={this.objectHandlerChild}
                 required
+                value={linkedin}
               />
             </label>
           </div>
@@ -154,6 +160,7 @@ class Fill extends React.Component {
                 placeholder="Ej: hermione-granger"
                 onChange={this.objectHandlerChild}
                 required
+                value={github}
               />
             </label>
           </div>

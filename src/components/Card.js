@@ -13,6 +13,8 @@ class Card extends React.Component {
     this.updateAvatar = this.updateAvatar.bind(this);
     this.objectHandler = this.objectHandler.bind(this);
     this.validateInfo = this.validateInfo.bind(this);
+    this.resetAll = this.resetAll.bind(this);
+
     this.state = {
       objectInfo: {
         palette: '1',
@@ -29,6 +31,7 @@ class Card extends React.Component {
         avatar: defaultImage,
       },
     };
+    this.initialState = this.state;
   }
   // componentDidMount(){
   // GetData.fetchData().then(responseData{this.setState})
@@ -67,18 +70,27 @@ class Card extends React.Component {
     console.log(this.state);
   }
 
+  //RESET ALL
+  resetAll() {
+    this.setState(this.initialState);
+  }
+
   render() {
-    const { profile, isAvatarDefault } = this.state;
+    const { profile, isAvatarDefault, objectInfo } = this.state;
     return (
       <div>
         <Header />
         <main className="main">
           <div className="wrapper">
-            <PreviewCard objectInfo={this.state} avatar={profile.avatar} />
+            <PreviewCard
+              objectInfo={objectInfo}
+              avatar={profile.avatar}
+              resetAll={this.resetAll}
+            />
             <Form
               validateInfo={this.validateInfo}
               objectHandler={this.objectHandler}
-              objectInfo={this.state.objectInfo}
+              objectInfo={objectInfo}
               avatar={profile.avatar}
               isAvatarDefault={isAvatarDefault}
               updateAvatar={this.updateAvatar}
