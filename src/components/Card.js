@@ -12,14 +12,18 @@ class Card extends React.Component {
     super(props);
     this.updateAvatar = this.updateAvatar.bind(this);
     this.objectHandler = this.objectHandler.bind(this);
+    this.validateInfo = this.validateInfo.bind(this);
     this.state = {
-      palette: '1',
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: '',
+      objectInfo: {
+        palette: '1',
+        name: '',
+        job: '',
+        email: '',
+        phone: '',
+        linkedin: '',
+        github: '',
+        photo: '',
+      },
       isAvatarDefault: true,
       profile: {
         avatar: defaultImage,
@@ -29,43 +33,70 @@ class Card extends React.Component {
   // componentDidMount(){
   // GetData.fetchData().then(responseData{this.setState})
   // }
+  validateInfo() {
+    console.log(this.state.objectInfo);
+    const { name, job, email, linkedin, github, photo } = this.state.objectInfo;
+    // console.log(name, job, email, linkedin, github);
+    if (name && job && email && linkedin && github && photo) {
+      return '';
+    } else {
+      return 'disabled';
+    }
+  }
+  // const userObject = this.state.objectInfo;
+  // for (const key in userObject) {
+  //   if (userObject[key] !== '') {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
+  /* function that updates state with input values*/
   objectHandler(event) {
-    console.log(event.currentTarget.value);
-    const value = event.currentTarget.value;
-    const stateAttribute = event.currentTarget.id;
-    const newState = {};
-
-    newState[stateAttribute] = value;
-    console.log(newState);
-    this.setState(newState);
+    // console.log(event.currentTarget.value);
+    const { value, id } = event.currentTarget;
+    // const value = event.currentTarget.value;
+    // const stateAttribute = event.currentTarget.id;
+    // const newState = {};
+    // newState[stateAttribute] = value;
+    // console.log(newState);
+    // this.setState({ objectInfo: newState });
+    // this.setState();}
+    // console.log({ [id]: value });
+    this.setState((prevState) => {
+      return { objectInfo: { ...prevState.objectInfo, [id]: value } };
+    });
+    // console.log(this.state);
   }
   updateAvatar(img) {
-    const { profile } = this.state;
+    /* reworked this because photo was not properly updated before and the data was not getting to validation point upon clicking on comparte*/
+    const { profile, objectInfo } = this.state;
     this.setState((prevState) => {
       const newProfile = { ...profile, avatar: img };
-
+      const newObjectInfo = { ...objectInfo, photo: img };
       return {
         profile: newProfile,
-        photo: img,
         isAvatarDefault: false,
+        objectInfo: newObjectInfo,
       };
     });
     console.log(this.state);
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.state);
     const { profile, isAvatarDefault } = this.state;
     return (
       <div>
         <Header />
-        <main className='main'>
-          <div className='wrapper'>
+        <main className="main">
+          <div className="wrapper">
             <PreviewCard objectInfo={this.state} avatar={profile.avatar} />
             <Form
+              validateInfo={this.validateInfo}
               objectHandler={this.objectHandler}
-              objectInfo={this.state}
+              objectInfo={this.state.objectInfo}
               avatar={profile.avatar}
               isAvatarDefault={isAvatarDefault}
               updateAvatar={this.updateAvatar}

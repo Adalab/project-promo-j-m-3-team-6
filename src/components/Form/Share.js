@@ -8,9 +8,12 @@ class Share extends React.Component {
 
   clickHandlerChild(ev) {
     this.props.collapsibleHandler(ev);
+    this.props.validateInfo();
   }
 
   render() {
+    const activateButton = this.props.validateInfo();
+    console.log(this.props.objectInfo);
     return (
       <div className="box__share">
         <div
@@ -37,7 +40,7 @@ class Share extends React.Component {
             type="submit"
             name="share"
             value="share"
-            className="share__content__button js-share disabled"
+            className={`share__content__button js-share ${activateButton}`}
           >
             <i className="far fa-address-card"></i>
             <span>CREAR TARJETA</span>

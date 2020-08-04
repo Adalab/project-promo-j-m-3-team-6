@@ -8,7 +8,7 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.collapsibleHandler = this.collapsibleHandler.bind(this);
-    this.uploadPhoto = this.uploadPhoto.bind(this);
+    // this.uploadPhoto = this.uploadPhoto.bind(this);
     this.state = { isOpen: 'collapsible-1' };
     /*we store the clicked collapsible in state with a default as the first collapsible to be open on page load*/
   }
@@ -22,16 +22,16 @@ class Form extends React.Component {
     }
   }
 
-  uploadPhoto(ev) {
-    console.log('funciono');
-  }
+  // uploadPhoto(ev) {
+  //   console.log('funciono');
+  // }
 
   render() {
     console.log(this.props);
     return (
-      <form className='form'>
+      <form className="form">
         <Design
-          id='collapsible-1'
+          id="collapsible-1"
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
@@ -39,19 +39,20 @@ class Form extends React.Component {
         />
 
         <Fill
-          id='collapsible-2'
+          id="collapsible-2"
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
           objectInfo={this.props.objectInfo}
-          uploadPhoto={this.uploadPhoto}
+          // uploadPhoto={this.uploadPhoto}
           avatar={this.props.avatar}
           isAvatarDefault={this.props.isAvatarDefault}
           updateAvatar={this.props.updateAvatar}
         />
 
         <Share
-          id='collapsible-3'
+          validateInfo={this.props.validateInfo}
+          id="collapsible-3"
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}

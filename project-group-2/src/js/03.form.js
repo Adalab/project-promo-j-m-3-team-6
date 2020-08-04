@@ -31,57 +31,57 @@ const formButton = document.querySelector('.js-share'); //Variable boton del for
 const textShare = document.querySelector('.js-textShare'); //Variable del texto oculto de compartir
 
 //Funcion que guarda los datos en el objeto y lo pinta en la tarjeta el texto
-function setData(ev) {
-  const name = ev.currentTarget.name;
-  const inputValue = ev.currentTarget.value;
-  formData[name] = inputValue;
-  updateCard();
-}
+// function setData(ev) {
+//   const name = ev.currentTarget.name;
+//   const inputValue = ev.currentTarget.value;
+//   formData[name] = inputValue;
+//   updateCard();
+// }
 
-function updateCardText(name, placeholder) {
-  cardFields[name].innerHTML = formData[name] || placeholder;
-}
+// function updateCardText(name, placeholder) {
+//   cardFields[name].innerHTML = formData[name] || placeholder;
+// }
 
 //Funcion que guarda los datos en el objeto
-function setLinks(ev) {
-  const name = ev.currentTarget.name;
-  const inputValue = ev.currentTarget.value;
-  formData[name] = inputValue;
-  updateCard();
-}
+// function setLinks(ev) {
+//   const name = ev.currentTarget.name;
+//   const inputValue = ev.currentTarget.value;
+//   formData[name] = inputValue;
+//   updateCard();
+// }
 
 //Funcion que imprime los datos en la tarjeta
-function updateCardLinks(name, prefix) {
-  cardFields[name].href = prefix + formData[name];
+// function updateCardLinks(name, prefix) {
+//   cardFields[name].href = prefix + formData[name];
 }
 
 //Funcion que actualiza los datos de la tarjeta
-function updateCard() {
-  updateCardText('name', 'Nombre Apellido');
-  updateCardText('job', 'Front-end developer');
-  updateCardLinks('email', 'mailto:');
-  updateCardLinks('phone', 'tel:');
-  updateCardLinks('linkedin', 'https://linkedin.com/in/');
-  updateCardLinks('github', 'https://github.com/');
-  if (formData.photo !== '') {
-    updateCardPhoto();
-  } else {
-    profileImage.style.backgroundImage = `url(./assets/images/Logo-Gryffincode.png)`;
-  }
-}
+// function updateCard() {
+//   updateCardText('name', 'Nombre Apellido');
+//   updateCardText('job', 'Front-end developer');
+//   updateCardLinks('email', 'mailto:');
+//   updateCardLinks('phone', 'tel:');
+//   updateCardLinks('linkedin', 'https://linkedin.com/in/');
+//   updateCardLinks('github', 'https://github.com/');
+//   if (formData.photo !== '') {
+//     updateCardPhoto();
+//   } else {
+//     profileImage.style.backgroundImage = `url(./assets/images/Logo-Gryffincode.png)`;
+//   }
+// }
 
 //Funcion que guarda los datos de la imagen en el objeto
-function setPhoto(photo) {
-  formData.photo = photo;
-  localStorage.setItem('userInfo', JSON.stringify(formData));
-  updateCard();
-}
+// function setPhoto(photo) {
+//   formData.photo = photo;
+//   localStorage.setItem('userInfo', JSON.stringify(formData));
+//   updateCard();
+// }
 
 //funcion que imprime la imagen en la tarjeta y preview
-function updateCardPhoto() {
-  profileImage.style.backgroundImage = `url(${formData.photo})`;
-  profilePreview.style.backgroundImage = `url(${formData.photo})`;
-}
+// function updateCardPhoto() {
+//   profileImage.style.backgroundImage = `url(${formData.photo})`;
+//   profilePreview.style.backgroundImage = `url(${formData.photo})`;
+// }
 
 //Funcion que valida los datos
 function validation(ev) {
