@@ -104,8 +104,8 @@ class Card extends React.Component {
     return (
       <div>
         <Header />
-        <main className="main">
-          <div className="wrapper">
+        <main className='main'>
+          <div className='wrapper'>
             <PreviewCard
               objectInfo={objectInfo}
               avatar={profile.avatar}
@@ -119,6 +119,7 @@ class Card extends React.Component {
               avatar={profile.avatar}
               isAvatarDefault={isAvatarDefault}
               updateAvatar={this.updateAvatar}
+              stateData={this.state}
             />
           </div>
         </main>

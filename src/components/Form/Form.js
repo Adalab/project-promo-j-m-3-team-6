@@ -23,9 +23,9 @@ class Form extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <form className="form">
+      <form className='form'>
         <Design
-          id="collapsible-1"
+          id='collapsible-1'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
@@ -33,7 +33,7 @@ class Form extends React.Component {
         />
 
         <Fill
-          id="collapsible-2"
+          id='collapsible-2'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
@@ -46,11 +46,12 @@ class Form extends React.Component {
         <Share
           fetchInfo={this.props.fetchInfo}
           validateInfo={this.props.validateInfo}
-          id="collapsible-3"
+          id='collapsible-3'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
           objectInfo={this.props.objectInfo}
+          stateData={this.props.stateData}
         />
       </form>
     );
