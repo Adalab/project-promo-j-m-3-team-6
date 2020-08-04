@@ -4,11 +4,16 @@ class Share extends React.Component {
   constructor(props) {
     super(props);
     this.clickHandlerChild = this.clickHandlerChild.bind(this);
+    this.fetchInfoChild = this.fetchInfoChild.bind(this);
   }
 
   clickHandlerChild(ev) {
     this.props.collapsibleHandler(ev);
     this.props.validateInfo();
+  }
+  fetchInfoChild(ev) {
+    ev.preventDefault();
+    this.props.fetchInfo();
   }
 
   render() {
@@ -41,6 +46,7 @@ class Share extends React.Component {
             name="share"
             value="share"
             className={`share__content__button js-share ${activateButton}`}
+            onClick={this.fetchInfoChild}
           >
             <i className="far fa-address-card"></i>
             <span>CREAR TARJETA</span>

@@ -44,6 +44,7 @@ class Form extends React.Component {
         />
 
         <Share
+          fetchInfo={this.props.fetchInfo}
           validateInfo={this.props.validateInfo}
           id="collapsible-3"
           collapsibleHandler={this.collapsibleHandler}

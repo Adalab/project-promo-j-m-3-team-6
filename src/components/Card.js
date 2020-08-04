@@ -5,7 +5,7 @@ import Footer from './Footer';
 import PreviewCard from './Preview-Card/PreviewCard';
 import '../stylesheets/_App.scss';
 import defaultImage from './Preview-Card/defaultImage';
-import GetData from './services/GetData';
+import { GetData } from './services/GetData';
 
 class Card extends React.Component {
   constructor(props) {
@@ -14,7 +14,8 @@ class Card extends React.Component {
     this.objectHandler = this.objectHandler.bind(this);
     this.validateInfo = this.validateInfo.bind(this);
     this.resetAll = this.resetAll.bind(this);
-
+    this.fetchInfo = this.fetchInfo.bind(this);
+    this.setURL = this.setURL.bind(this);
     this.state = {
       objectInfo: {
         palette: '1',
@@ -33,9 +34,32 @@ class Card extends React.Component {
     };
     this.initialState = this.state;
   }
-  // componentDidMount(){
-  // GetData.fetchData().then(responseData{this.setState})
-  // }
+  fetchInfo() {
+    const json = this.state.objectInfo;
+    GetData(json)
+      .then((result) => this.setURL(result))
+      .catch((error) => this.handleError(error));
+    this.setState({
+      isLoading: true,
+    });
+  }
+
+  setURL(result) {
+    if (result.success) {
+      this.setState({
+        cardSuccess: true,
+        cardURL: result.cardURL,
+        isLoading: false,
+      });
+    } else {
+      this.setState({
+        cardSuccess: false,
+        isLoading: false,
+      });
+    }
+    console.log(this.state.cardURL);
+  }
+
   validateInfo() {
     console.log(this.state.objectInfo);
     const { name, job, email, linkedin, github, photo } = this.state.objectInfo;
@@ -88,6 +112,7 @@ class Card extends React.Component {
               resetAll={this.resetAll}
             />
             <Form
+              fetchInfo={this.fetchInfo}
               validateInfo={this.validateInfo}
               objectHandler={this.objectHandler}
               objectInfo={objectInfo}
