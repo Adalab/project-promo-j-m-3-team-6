@@ -5,6 +5,7 @@ import Footer from './Footer';
 import PreviewCard from './Preview-Card/PreviewCard';
 import '../stylesheets/_App.scss';
 import defaultImage from './Preview-Card/defaultImage';
+import GetData from './services/GetData';
 
 class Card extends React.Component {
   constructor(props) {
@@ -25,6 +26,10 @@ class Card extends React.Component {
       },
     };
   }
+  // componentDidMount(){
+  // GetData.fetchData().then(responseData{this.setState})
+  // }
+
   objectHandler(event) {
     console.log(event.currentTarget.value);
     const value = event.currentTarget.value;
@@ -55,8 +60,8 @@ class Card extends React.Component {
     return (
       <div>
         <Header />
-        <main className="main">
-          <div className="wrapper">
+        <main className='main'>
+          <div className='wrapper'>
             <PreviewCard objectInfo={this.state} avatar={profile.avatar} />
             <Form
               objectHandler={this.objectHandler}
