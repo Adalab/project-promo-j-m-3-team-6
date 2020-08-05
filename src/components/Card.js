@@ -77,11 +77,9 @@ class Card extends React.Component {
         isLoading: false,
       });
     }
-    console.log(this.state.cardURL);
   }
 
   validateInfo() {
-    console.log(this.state.objectInfo);
     const { name, job, email, linkedin, github, photo } = this.state.objectInfo;
     if (name && job && email && linkedin && github && photo) {
       return '';
@@ -96,7 +94,6 @@ class Card extends React.Component {
     this.setState((prevState) => {
       return { objectInfo: { ...prevState.objectInfo, [id]: value } };
     });
-    console.log(this.state);
   }
   updateAvatar(img) {
     /* reworked this because photo was not being properly updated before and the data was not getting to validation point upon clicking on comparte*/
@@ -111,7 +108,6 @@ class Card extends React.Component {
         objectInfo: newObjectInfo,
       };
     });
-    console.log(this.state);
   }
 
   //RESET ALL
@@ -124,8 +120,8 @@ class Card extends React.Component {
     return (
       <div>
         <Header />
-        <main className='main'>
-          <div className='wrapper'>
+        <main className="main">
+          <div className="wrapper">
             <PreviewCard
               objectInfo={objectInfo}
               avatar={profile.avatar}

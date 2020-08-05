@@ -2,11 +2,7 @@ import React from 'react';
 import '../../stylesheets/_App.scss';
 
 class PreviewCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-    console.log(this.props);
     return (
       <section className="section__card preview__section">
         <div className="preview__container">

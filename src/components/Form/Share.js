@@ -22,15 +22,15 @@ class Share extends React.Component {
     const tweet = 'Aquí tienes tu tarjeta Griffyncode:';
 
     return (
-      <div className='box__share'>
+      <div className="box__share">
         <div
-          className='share__menu js-arrow'
+          className="share__menu js-arrow"
           id={this.props.id}
           onClick={this.clickHandlerChild}
         >
-          <div className='content__title'>
-            <i className='icon fas fa-share-alt'></i>
-            <h2 className='titleMenu'>comparte</h2>
+          <div className="content__title">
+            <i className="icon fas fa-share-alt"></i>
+            <h2 className="titleMenu">comparte</h2>
           </div>
           <i
             className={`fa fa-chevron-down js-arrowsTransform ${
@@ -44,13 +44,13 @@ class Share extends React.Component {
           }`}
         >
           <button
-            type='submit'
+            type="submit"
             // name='share'
-            value='share'
+            value="share"
             className={`share__content__button js-share ${activateButton}`}
             onClick={this.fetchInfoChild}
           >
-            <i className='far fa-address-card'></i>
+            <i className="far fa-address-card"></i>
             <span>CREAR TARJETA</span>
           </button>
         </div>
@@ -59,27 +59,25 @@ class Share extends React.Component {
             this.props.stateData.cardSuccess === true ? '' : 'hidden'
           }`}
         >
-          <h5 className='text__share__create'>La tarjeta ha sido creada:</h5>
-          <a className='text__share__link js-linkShare' href={cardURL}>
+          <h5 className="text__share__create">La tarjeta ha sido creada:</h5>
+          <a className="text__share__link js-linkShare" href={cardURL}>
             {cardURL}
           </a>
           <a
             href={`http://twitter.com/share?text=${tweet}&url=${cardURL}`}
-            alt='Tu tarjeta para compartir'
+            alt="Tu tarjeta para compartir"
+            className="twitter-share-button text__share__button"
+            data-size="large"
+            data-text="custom share text"
+            data-url="https://dev.twitter.com/web/tweet-button"
+            data-hashtags="example,demo"
+            data-via="Adalab_Digital"
+            data-related="twitterapi,twitter"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <button
-              className='twitter-share-button text__share__button'
-              data-size='large'
-              data-text='custom share text'
-              data-url='https://dev.twitter.com/web/tweet-button'
-              data-hashtags='example,demo'
-              data-via='Adalab_Digital'
-              data-related='twitterapi,twitter'
-            >
-              <i className='fab fa-twitter'></i>
-
-              <span>Compartir en twitter</span>
-            </button>
+            <i className="fab fa-twitter"></i>
+            <span>Compartir en twitter</span>
           </a>
         </div>
       </div>
