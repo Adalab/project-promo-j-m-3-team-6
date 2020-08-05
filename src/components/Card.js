@@ -44,6 +44,26 @@ class Card extends React.Component {
     });
   }
 
+  componentDidMount() {
+    const saveObject = JSON.parse(localStorage.getItem('saveObject'));
+    const saveAvatar = JSON.parse(localStorage.getItem('saveAvatar'));
+    const saveProfile = JSON.parse(localStorage.getItem('saveProfile'));
+    if (saveObject) {
+      this.setState({
+        objectInfo: saveObject,
+        isAvatarDefault: saveAvatar,
+        profile: saveProfile,
+      });
+    }
+  }
+  componentDidUpdate() {
+    const saveObject = this.state.objectInfo;
+    localStorage.setItem('saveObject', JSON.stringify(saveObject));
+    const saveAvatar = this.state.isAvatarDefault;
+    localStorage.setItem('saveAvatar', JSON.stringify(saveAvatar));
+    const saveProfile = this.state.profile;
+    localStorage.setItem('saveProfile', JSON.stringify(saveProfile));
+  }
   setURL(result) {
     if (result.success) {
       this.setState({
