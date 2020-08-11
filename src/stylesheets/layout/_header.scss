@@ -1,9 +1,7 @@
-// @import '../core/variables';
-// @import '../core/reset';
-// @import '../core/mixins';
-
 .header {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
   height: 111px;
   text-align: left;
@@ -15,6 +13,44 @@
 
     &--img {
       width: 100%;
+    }
+  }
+  &__button__container {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    align-items: center;
+    display: flex;
+    margin-right: rem(50);
+    margin-bottom: rem(30);
+    h3 {
+      color: $color-text-copy;
+      font-size: rem(14);
+      font-weight: normal;
+      padding-right: rem(10);
+    }
+    &--slider {
+      display: flex;
+      align-items: center;
+      height: fit-content;
+      width: rem(40);
+      border-radius: rem(20);
+      background-color: $color-text-copy;
+      &.golden-off {
+        justify-content: flex-start;
+        background-color: lightgrey;
+      }
+      &.golden-active {
+        background-color: $color-primary;
+        justify-content: flex-end;
+      }
+      &-circle {
+        background-color: $color-text-light;
+        height: rem(20);
+        width: rem(20);
+        border-radius: rem(20);
+        cursor: pointer;
+      }
     }
   }
 }

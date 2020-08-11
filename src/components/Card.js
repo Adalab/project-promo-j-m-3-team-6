@@ -16,6 +16,7 @@ class Card extends React.Component {
     this.resetAll = this.resetAll.bind(this);
     this.fetchInfo = this.fetchInfo.bind(this);
     this.setURL = this.setURL.bind(this);
+    this.goldenModeHandler = this.goldenModeHandler.bind(this);
     this.state = {
       objectInfo: {
         palette: '1',
@@ -31,6 +32,7 @@ class Card extends React.Component {
       profile: {
         avatar: defaultImage,
       },
+      isGolden: false,
     };
     this.initialState = this.state;
   }
@@ -124,11 +126,26 @@ class Card extends React.Component {
     this.setState(this.initialState);
   }
 
+  //golden mode
+  goldenModeHandler() {
+    console.log('clicked button');
+    if (this.state.isGolden) {
+      this.setState({ isGolden: false });
+      return 'off';
+    } else {
+      this.setState({ isGolden: true });
+      return 'active';
+    }
+  }
+
   render() {
     const { profile, isAvatarDefault, objectInfo } = this.state;
     return (
       <div>
-        <Header />
+        <Header
+          goldenModeHandler={this.goldenModeHandler}
+          isGolden={this.state.isGolden}
+        />
         <main className="main">
           <div className="wrapper">
             <PreviewCard
