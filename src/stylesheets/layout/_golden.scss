@@ -1,66 +1,66 @@
 .golden {
-  background-color: rgba(255, 243, 173, 0.562);
+  background-color: $color-background-golden;
 
   .titleMenu {
-    color: black;
+    color: $color-dark;
     &:hover {
-      color: rgb(182, 0, 0) !important;
+      color: $color-primary-golden !important;
     }
   }
 
   .text {
-    color: black;
+    color: $color-dark;
     &:hover {
-      color: rgb(182, 0, 0);
+      color: $color-primary-golden;
     }
   }
 
   .design__content__title {
-    color: black;
+    color: $color-dark;
   }
 
   .box__design {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $color-dark;
   }
 
   .share__content {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $color-dark;
   }
 
   .fillOut {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $color-dark;
   }
   .button__reset {
-    border: 1px solid rgb(182, 0, 0);
-    color: rgb(182, 0, 0);
+    border: 1px solid $color-primary-golden;
+    color: $color-primary-golden;
   }
   .section__card {
     background-image: url('https://www.fabricsandpapers.com/media/catalog/product/cache/dd7295f9c8e1f63cd0651955a72a9820/v/i/vintage-floral-fabric-vintage.jpg');
   }
   .fa-object-ungroup {
-    color: rgb(182, 0, 0) !important;
+    color: $color-primary-golden !important;
   }
   .fa-keyboard-o {
-    color: rgb(182, 0, 0);
+    color: $color-primary-golden;
   }
   .fa-share-alt {
-    color: rgb(182, 0, 0) !important;
+    color: $color-primary-golden !important;
   }
 
   .fa {
-    color: rgb(182, 0, 0);
+    color: $color-primary-golden;
   }
 
   .get-avatar__trigger,
   .share__content__button {
-    background-color: rgb(182, 0, 0);
+    background-color: $color-primary-golden;
     &:hover {
       font-weight: bold;
-      background-color: goldenrod;
+      background-color: $color-secondary-golden;
     }
   }
 
   .text__share__link {
-    color: rgb(182, 0, 0);
+    color: $color-primary-golden;
   }
 }

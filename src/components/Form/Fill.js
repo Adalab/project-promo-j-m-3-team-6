@@ -84,7 +84,7 @@ class Fill extends React.Component {
           </div>
           <div className="item">
             <label htmlFor="phone">
-              Teléfono
+              Teléfono 
               <input
                 type="tel"
                 id="phone"
