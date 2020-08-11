@@ -129,7 +129,7 @@ class Card extends React.Component {
     return (
       <div>
         <Header />
-        <main className="main">
+        <main className="main golden">
           <div className="wrapper">
             <PreviewCard
               objectInfo={objectInfo}

@@ -1,0 +1,66 @@
+.golden {
+  background-color: rgba(255, 243, 173, 0.562);
+
+  .titleMenu {
+    color: black;
+    &:hover {
+      color: rgb(182, 0, 0) !important;
+    }
+  }
+
+  .text {
+    color: black;
+    &:hover {
+      color: rgb(182, 0, 0);
+    }
+  }
+
+  .design__content__title {
+    color: black;
+  }
+
+  .box__design {
+    border-bottom: 1px solid black;
+  }
+
+  .share__content {
+    border-bottom: 1px solid black;
+  }
+
+  .fillOut {
+    border-bottom: 1px solid black;
+  }
+  .button__reset {
+    border: 1px solid rgb(182, 0, 0);
+    color: rgb(182, 0, 0);
+  }
+  .section__card {
+    background-image: url('https://www.fabricsandpapers.com/media/catalog/product/cache/dd7295f9c8e1f63cd0651955a72a9820/v/i/vintage-floral-fabric-vintage.jpg');
+  }
+  .fa-object-ungroup {
+    color: rgb(182, 0, 0) !important;
+  }
+  .fa-keyboard-o {
+    color: rgb(182, 0, 0);
+  }
+  .fa-share-alt {
+    color: rgb(182, 0, 0) !important;
+  }
+
+  .fa {
+    color: rgb(182, 0, 0);
+  }
+
+  .get-avatar__trigger,
+  .share__content__button {
+    background-color: rgb(182, 0, 0);
+    &:hover {
+      font-weight: bold;
+      background-color: goldenrod;
+    }
+  }
+
+  .text__share__link {
+    color: rgb(182, 0, 0);
+  }
+}

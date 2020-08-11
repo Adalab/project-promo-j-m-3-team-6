@@ -21,7 +21,7 @@ class Share extends React.Component {
     const activateButton = this.props.validateInfo();
     const hideErrorMessage = this.props.hideMessage();
     const cardURL = this.props.stateData.cardURL;
-    const tweet = 'Aquí tienes tu tarjeta Griffyncode:';
+    const tweet = 'Aquí tienes tu tarjeta Golden Adalabers:';
 
     return (
       <div className="box__share">
@@ -65,9 +65,12 @@ class Share extends React.Component {
           }`}
         >
           <h5 className="text__share__create">
+            <span role="img" aria-label="abuela">
+              👵🏻
+            </span>
             Tu tarjeta ha sido creada{' '}
-            <span role="img" aria-label="stars">
-              ✨
+            <span role="img" aria-label="abuela">
+              👵🏻
             </span>
             :
           </h5>
