@@ -47,7 +47,7 @@ class Fill extends React.Component {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Ej: Hermione Granger"
+                placeholder="Ej: Sophia Petrillo"
                 required
                 onChange={this.objectHandlerChild}
                 value={name}
@@ -61,7 +61,7 @@ class Fill extends React.Component {
                 type="text"
                 id="job"
                 name="job"
-                placeholder="Ej: Wizard"
+                placeholder="Jubilada"
                 onChange={this.objectHandlerChild}
                 required
                 value={job}
@@ -103,7 +103,7 @@ class Fill extends React.Component {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Ej: la-hermi@gmail.com"
+                placeholder="Ej: señora-de-oro@gmail.com"
                 onChange={this.objectHandlerChild}
                 required
                 value={email}
@@ -117,7 +117,7 @@ class Fill extends React.Component {
                 type="text"
                 id="linkedin"
                 name="linkedin"
-                placeholder="Ej: hermione.granger"
+                placeholder="Ej: sophia.petrillo"
                 onChange={this.objectHandlerChild}
                 required
                 value={linkedin}
@@ -131,7 +131,7 @@ class Fill extends React.Component {
                 type="text"
                 id="github"
                 name="github"
-                placeholder="Ej: hermione-granger"
+                placeholder="Ej: sophia-petrillo"
                 onChange={this.objectHandlerChild}
                 required
                 value={github}
