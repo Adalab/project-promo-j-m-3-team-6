@@ -3,7 +3,6 @@ import Form from './Form/Form';
 import Header from './Header';
 import Footer from './Footer';
 import PreviewCard from './Preview-Card/PreviewCard';
-import '../stylesheets/_App.scss';
 import defaultImage from './Preview-Card/defaultImage';
 import { GetData } from './services/GetData';
 
@@ -13,6 +12,7 @@ class Card extends React.Component {
     this.updateAvatar = this.updateAvatar.bind(this);
     this.objectHandler = this.objectHandler.bind(this);
     this.validateInfo = this.validateInfo.bind(this);
+    this.hideMessage = this.hideMessage.bind(this);
     this.resetAll = this.resetAll.bind(this);
     this.fetchInfo = this.fetchInfo.bind(this);
     this.setURL = this.setURL.bind(this);
@@ -90,6 +90,15 @@ class Card extends React.Component {
     }
   }
 
+  hideMessage() {
+    const { name, job, email, linkedin, github, photo } = this.state.objectInfo;
+    if (name && job && email && linkedin && github && photo) {
+      return 'hidden';
+    } else {
+      return '';
+    }
+  }
+
   /* function that updates state with input values*/
   objectHandler(event) {
     const { value, id } = event.currentTarget;
@@ -124,8 +133,8 @@ class Card extends React.Component {
     return (
       <div>
         <Header />
-        <main className='main'>
-          <div className='wrapper'>
+        <main className="main">
+          <div className="wrapper">
             <PreviewCard
               objectInfo={objectInfo}
               avatar={profile.avatar}
@@ -134,6 +143,7 @@ class Card extends React.Component {
             <Form
               fetchInfo={this.fetchInfo}
               validateInfo={this.validateInfo}
+              hideMessage={this.hideMessage}
               objectHandler={this.objectHandler}
               objectInfo={objectInfo}
               avatar={profile.avatar}

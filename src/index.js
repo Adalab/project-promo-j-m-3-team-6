@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
-import './stylesheets/_index.scss';
+import './stylesheets/_App.scss';
 import App from './components/App';
 
 ReactDOM.render(

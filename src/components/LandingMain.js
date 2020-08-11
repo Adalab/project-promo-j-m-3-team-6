@@ -1,14 +1,13 @@
 import React from 'react';
 import Logo from '../images/logo-awesome-profile-cards.svg';
-import '../stylesheets/layout/_landingMain.scss';
 import { Link } from 'react-router-dom';
 
 class LandingMain extends React.Component {
   render() {
     return (
-      <main className='main-landing'>
-        <div className='main_img'>
-          <img src={Logo} alt='logo-awesome-profile-cards' />
+      <main className="main-landing">
+        <div className="main_img">
+          <img src={Logo} alt="logo-awesome-profile-cards" />
         </div>
         <h1>Crea tu tarjeta de visita</h1>
         <p>
@@ -16,27 +15,27 @@ class LandingMain extends React.Component {
             Crea mejores contactos profesionales de forma fácil y cómoda
           </span>
         </p>
-        <article className='steps-landing'>
+        <article className="steps-landing">
           <div>
-            <span className='icon-landing'>
-              <i className='fa fa-object-ungroup' aria-hidden='true'></i>
+            <span className="icon-landing">
+              <i className="fa fa-object-ungroup" aria-hidden="true"></i>
             </span>
-            <span className='text-landing'>Diseña</span>
+            <span className="text-landing">Diseña</span>
           </div>
           <div>
-            <span className='icon-landing'>
-              <i className='fa fa-keyboard-o' aria-hidden='true'></i>
+            <span className="icon-landing">
+              <i className="fa fa-keyboard-o" aria-hidden="true"></i>
             </span>
-            <span className='text-landing'>Rellena</span>
+            <span className="text-landing">Rellena</span>
           </div>
           <div>
-            <span className='icon-landing'>
-              <i className='fa fa-share-alt' aria-hidden='true'></i>
+            <span className="icon-landing">
+              <i className="fa fa-share-alt" aria-hidden="true"></i>
             </span>
-            <span className='text-landing'>Comparte</span>
+            <span className="text-landing">Comparte</span>
           </div>
         </article>
-        <Link to={'/card'} className='button-start' title='start'>
+        <Link to={'/card'} className="button-start" title="start">
           COMENZAR
         </Link>
       </main>

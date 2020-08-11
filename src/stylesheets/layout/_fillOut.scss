@@ -112,21 +112,9 @@ body {
   }
 
   .action__hiddenField {
-    /* Ocultamos el input de tipo "file" porque no podemos 
-    darle los estilos que queremos */
     display: none;
   }
 }
-/* .img-disabled {
-  background-color: rgb(184, 184, 184);
-  color: white;
-  border: inherit;
-  width: 140px;
-  height: 30px;
-  border-radius: 3px;
-  cursor: default;
-  outline: none;
-} */
 
 .profile {
   display: flex;

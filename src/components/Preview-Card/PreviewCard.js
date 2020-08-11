@@ -1,17 +1,13 @@
 import React from 'react';
-import '../../stylesheets/_App.scss';
 
 class PreviewCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     console.log(this.props);
     return (
       <section className="section__card preview__section">
         <div className="preview__container">
           <button
-            className="button__reset js-reset"
+            className="button__reset"
             type="submit"
             onClick={this.props.resetAll}
             value="Reset form"
@@ -22,14 +18,14 @@ class PreviewCard extends React.Component {
             className={`preview__card palette${this.props.objectInfo.palette}`}
           >
             <div className="title">
-              <h2 className="title__name js-text-name">
+              <h2 className="title__name">
                 {this.props.objectInfo.name || 'Nombre Apellidos'}
               </h2>
-              <h3 className="title__position js-text-job">
+              <h3 className="title__position">
                 {this.props.objectInfo.job || 'Front-end developer'}
               </h3>
             </div>
-            <div className="profile__image js__profile-image">
+            <div className="profile__image">
               <div
                 className="profile__avatar"
                 style={{

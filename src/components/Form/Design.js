@@ -20,7 +20,7 @@ class Design extends React.Component {
     return (
       <div className="box__design">
         <div
-          className="design__menu js-arrow arrow"
+          className="design__menu  arrow"
           id={this.props.id}
           onClick={this.clickHandlerChild}
         >
@@ -29,13 +29,13 @@ class Design extends React.Component {
             <h2 className="titleMenu">Diseña</h2>
           </div>
           <i
-            className={`fa fa-chevron-down js-arrowsTransform ${
+            className={`fa fa-chevron-down ${
               this.props.isOpen === this.props.id ? '' : 'transform'
             }`}
           ></i>
         </div>
         <div
-          className={`design__content js-hidden ${
+          className={`design__content  ${
             this.props.isOpen === this.props.id ? '' : 'hidden'
           }`}
         >
@@ -44,7 +44,7 @@ class Design extends React.Component {
             <label htmlFor="color1">
               <div className="design__content__input">
                 <input
-                  className="inputDesign js-check"
+                  className="inputDesign "
                   id="palette"
                   type="radio"
                   value="1"
@@ -62,7 +62,7 @@ class Design extends React.Component {
             <label htmlFor="color2">
               <div className="design__content__input">
                 <input
-                  className="inputDesign js-check"
+                  className="inputDesign "
                   id="palette"
                   type="radio"
                   value="2"
@@ -80,7 +80,7 @@ class Design extends React.Component {
             <label htmlFor="color3">
               <div className="design__content__input">
                 <input
-                  className="inputDesign js-check"
+                  className="inputDesign "
                   id="palette"
                   type="radio"
                   value="3"
