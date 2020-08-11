@@ -50,12 +50,12 @@
   &__button {
     width: 199px;
     height: 50px;
+    margin-left: 60px;
     background-color: $color-primary;
     color: white;
     border-radius: 12px;
     border: inherit;
     text-align: center;
-    // margin-top: 20px;
     outline: none;
     cursor: pointer;
     transition: background-color 1s ease;
@@ -71,9 +71,12 @@
     }
   }
 
-  &__text__error {
+  &__error {
+    text-align: center;
+
     & small {
       margin-bottom: 15px;
+      color: red;
     }
   }
 }
@@ -123,6 +126,7 @@
   }
 
   &__button {
+    margin-left: 50px;
     width: 181px;
     height: 30px;
     margin-left: 50px;

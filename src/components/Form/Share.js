@@ -55,10 +55,8 @@ class Share extends React.Component {
             <span>CREAR TARJETA</span>
           </button>
 
-          <div className={`text__error ${hideErrorMessage}`}>
-            <small>
-              Completa el formulario para poder compartir tu tarjeta
-            </small>
+          <div className={`share__content__error ${hideErrorMessage}`}>
+            <small>Completa el formulario para poder crear tu tarjeta.</small>
           </div>
         </div>
         <div
