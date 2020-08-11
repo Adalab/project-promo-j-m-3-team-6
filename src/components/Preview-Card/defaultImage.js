@@ -1,4 +1,5 @@
-import Logo from '../../images/Logo-Gryffincode.png';
+import Logo from '../../images/golden-jovenes.jpg';
+
 const defaultImage = Logo;
 
 export default defaultImage;

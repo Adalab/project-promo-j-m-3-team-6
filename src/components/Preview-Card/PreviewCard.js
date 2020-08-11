@@ -1,4 +1,5 @@
 import React from 'react';
+import defaultPhotoGolden from '../../images/golden-viejas.jpg';
 
 class PreviewCard extends React.Component {
   render() {
@@ -28,7 +29,11 @@ class PreviewCard extends React.Component {
               <div
                 className="profile__avatar"
                 style={{
-                  backgroundImage: `url(${this.props.avatar}`,
+                  backgroundImage: `url(${
+                    this.props.isGolden === true
+                      ? defaultPhotoGolden
+                      : this.props.avatar
+                  }`,
                 }}
               ></div>
             </div>

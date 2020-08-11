@@ -42,7 +42,7 @@ class Fill extends React.Component {
         >
           <div className="item">
             <label htmlFor="name">
-              Nombre completo
+              Nombre completo *
               <input
                 type="text"
                 id="name"
@@ -56,7 +56,7 @@ class Fill extends React.Component {
           </div>
           <div className="item">
             <label htmlFor="job">
-              Puesto
+              Puesto *
               <input
                 type="text"
                 id="job"
@@ -70,7 +70,7 @@ class Fill extends React.Component {
           </div>
           <div className="item">
             <label htmlFor="img-selector">
-              Imagen de perfil
+              Imagen de perfil *
               <div className="fillOut-image">
                 <GetAvatar
                   objectInfo={this.props.objectInfo}
@@ -98,7 +98,7 @@ class Fill extends React.Component {
           </div>
           <div className="item">
             <label htmlFor="email">
-              Email
+              Email *
               <input
                 type="email"
                 id="email"
@@ -112,7 +112,7 @@ class Fill extends React.Component {
           </div>
           <div className="item">
             <label htmlFor="linkedin">
-              Linkedin
+              Linkedin *
               <input
                 type="text"
                 id="linkedin"
@@ -126,7 +126,7 @@ class Fill extends React.Component {
           </div>
           <div className="item">
             <label htmlFor="github">
-              Github
+              Github *
               <input
                 type="text"
                 id="github"

@@ -50,11 +50,13 @@ class Card extends React.Component {
     const saveObject = JSON.parse(localStorage.getItem('saveObject'));
     const saveAvatar = JSON.parse(localStorage.getItem('saveAvatar'));
     const saveProfile = JSON.parse(localStorage.getItem('saveProfile'));
+    const saveGolden = JSON.parse(localStorage.getItem('saveGolden'));
     if (saveObject) {
       this.setState({
         objectInfo: saveObject,
         isAvatarDefault: saveAvatar,
         profile: saveProfile,
+        isGolden: saveGolden,
       });
     }
   }
@@ -65,6 +67,7 @@ class Card extends React.Component {
     localStorage.setItem('saveAvatar', JSON.stringify(saveAvatar));
     const saveProfile = this.state.profile;
     localStorage.setItem('saveProfile', JSON.stringify(saveProfile));
+    localStorage.setItem('saveGolden', JSON.stringify(this.state.isGolden));
   }
   setURL(result) {
     if (result.success) {
@@ -146,12 +149,13 @@ class Card extends React.Component {
           goldenModeHandler={this.goldenModeHandler}
           isGolden={this.state.isGolden}
         />
-        <main className="main">
+        <main className={`main ${this.state.isGolden ? 'golden' : ''}`}>
           <div className="wrapper">
             <PreviewCard
               objectInfo={objectInfo}
               avatar={profile.avatar}
               resetAll={this.resetAll}
+              isGolden={this.state.isGolden}
             />
             <Form
               fetchInfo={this.fetchInfo}
