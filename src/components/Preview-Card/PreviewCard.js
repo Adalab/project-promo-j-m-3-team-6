@@ -2,7 +2,6 @@ import React from 'react';
 
 class PreviewCard extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <section className="section__card preview__section">
         <div className="preview__container">

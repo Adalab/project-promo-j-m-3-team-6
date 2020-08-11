@@ -11,12 +11,10 @@ class Design extends React.Component {
   }
 
   objectHandlerChild(event) {
-    console.log(event.currentTarget.id);
     this.props.objectHandler(event);
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="box__design">
         <div

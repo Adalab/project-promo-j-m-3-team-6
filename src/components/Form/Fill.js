@@ -16,7 +16,6 @@ class Fill extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const { name, job, phone, email, github, linkedin } = this.props.objectInfo;
     return (
       <div className="fillOut">

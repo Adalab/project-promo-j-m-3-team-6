@@ -33,8 +33,6 @@ class GetAvatar extends Component {
   }
 
   render() {
-    console.log(this.props);
-    console.log(this.props.objectInfo);
     const { isAvatarDefault, avatar } = this.props;
     return (
       <div className="get-avatar">

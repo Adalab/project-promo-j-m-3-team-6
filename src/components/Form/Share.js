@@ -77,20 +77,15 @@ class Share extends React.Component {
           <a
             href={`http://twitter.com/share?text=${tweet}&url=${cardURL}`}
             alt="Tu tarjeta para compartir"
+            className="twitter-share-button text__share__button"
+            data-size="large"
+            data-text="custom share text"
+            data-hashtags="example,demo"
+            data-via="Adalab_Digital"
           >
-            <button
-              className="twitter-share-button text__share__button"
-              data-size="large"
-              data-text="custom share text"
-              data-url="https://dev.twitter.com/web/tweet-button"
-              data-hashtags="example,demo"
-              data-via="Adalab_Digital"
-              data-related="twitterapi,twitter"
-            >
-              <i className="fab fa-twitter"></i>
+            <i className="fab fa-twitter"></i>
 
-              <span>Compartir en twitter</span>
-            </button>
+            <span>Compartir en twitter</span>
           </a>
         </div>
       </div>
