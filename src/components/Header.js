@@ -1,5 +1,5 @@
 import React from 'react';
-import headerLogo from '../images/logo-awesome-profile-cards.svg';
+import headerLogo from '../images/golden-logo.png';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {

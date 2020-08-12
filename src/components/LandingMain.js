@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/logo-awesome-profile-cards.svg';
+import Logo from '../images/golden-logo.png';
 import { Link } from 'react-router-dom';
 import audio from '../audio/goldengirls.mp3';
 import ReactAudioPlayer from 'react-audio-player';
