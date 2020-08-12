@@ -1,4 +1,4 @@
-import Logo from '../../images/golden-jovenes.jpg';
+import Logo from '../../images/golden-adalabers.gif';
 
 const defaultImage = Logo;
 
