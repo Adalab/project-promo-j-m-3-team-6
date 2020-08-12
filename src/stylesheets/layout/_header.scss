@@ -21,13 +21,18 @@
     display: inline-block;
     align-items: center;
     display: flex;
-    margin-right: rem(50);
+    margin-left: rem(20);
+    margin-right: rem(20);
     margin-bottom: rem(30);
+    @include tablet {
+      margin-right: rem(50);
+    }
     h3 {
       color: $color-text-copy;
       font-size: rem(14);
       font-weight: normal;
       padding-right: rem(10);
+      text-align: right;
     }
     &--slider {
       display: flex;

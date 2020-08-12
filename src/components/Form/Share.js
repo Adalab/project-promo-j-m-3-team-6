@@ -24,13 +24,13 @@ class Share extends React.Component {
     const tweet = 'Aquí tienes tu tarjeta Golden Adalabers:';
 
     return (
-      <div className='box__share'>
+      <div className="box__share">
         <div
-          className='share__menu'
+          className="share__menu"
           id={this.props.id}
           onClick={this.clickHandlerChild}
         >
-          <div className='content__title'>
+          <div className="content__title">
             <i
               className={
                 this.props.isGolden
@@ -39,7 +39,7 @@ class Share extends React.Component {
               }
             ></i>
 
-            <h2 className='titleMenu'>comparte</h2>
+            <h2 className="titleMenu golden_title">comparte</h2>
           </div>
           <i
             className={`${
@@ -53,8 +53,8 @@ class Share extends React.Component {
           }`}
         >
           <button
-            type='submit'
-            value='share'
+            type="submit"
+            value="share"
             className={`share__content__button ${activateButton}`}
             onClick={this.fetchInfoChild}
           >
@@ -77,29 +77,29 @@ class Share extends React.Component {
             this.props.stateData.cardSuccess === true ? '' : 'hidden'
           }`}
         >
-          <h5 className='text__share__create'>
-            <span role='img' aria-label='abuela'>
+          <h5 className="text__share__create">
+            <span role="img" aria-label="abuela">
               👵🏻
             </span>
             Tu tarjeta ha sido creada{' '}
-            <span role='img' aria-label='abuela'>
+            <span role="img" aria-label="abuela">
               👵🏻
             </span>
             :
           </h5>
-          <a className='text__share__link' href={cardURL}>
+          <a className="text__share__link" href={cardURL}>
             {cardURL}
           </a>
           <a
             href={`http://twitter.com/share?text=${tweet}&url=${cardURL}`}
-            alt='Tu tarjeta para compartir'
-            className='twitter-share-button text__share__button'
-            data-size='large'
-            data-text='custom share text'
-            data-hashtags='example,demo'
-            data-via='Adalab_Digital'
+            alt="Tu tarjeta para compartir"
+            className="twitter-share-button text__share__button"
+            data-size="large"
+            data-text="custom share text"
+            data-hashtags="example,demo"
+            data-via="Adalab_Digital"
           >
-            <i className='fab fa-twitter'></i>
+            <i className="fab fa-twitter"></i>
 
             <span>Compartir en twitter</span>
           </a>
