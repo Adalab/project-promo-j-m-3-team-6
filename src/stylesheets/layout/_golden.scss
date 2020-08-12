@@ -56,4 +56,13 @@
   .text__share__link {
     color: $color-primary-golden;
   }
+
+  .disabled {
+    background-color: grey !important;
+    :hover {
+      font-weight: normal;
+
+      background-color: grey !important;
+    }
+  }
 }
