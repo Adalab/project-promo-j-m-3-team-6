@@ -31,13 +31,20 @@ class Share extends React.Component {
           onClick={this.clickHandlerChild}
         >
           <div className="content__title">
-            <i className="icon fas fa-share-alt"></i>
-            <h2 className="titleMenu">comparte</h2>
+            <i
+              className={
+                this.props.isGolden
+                  ? 'fontawesome fas fa-cookie-bite'
+                  : 'icon fas fa-share-alt'
+              }
+            ></i>
+
+            <h2 className="titleMenu golden_title">comparte</h2>
           </div>
           <i
-            className={`fa fa-chevron-down ${
-              this.props.isOpen === this.props.id ? '' : 'transform'
-            }`}
+            className={`${
+              this.props.isGolden ? 'fas fa-glasses' : 'fa fa-chevron-down'
+            } ${this.props.isOpen === this.props.id ? '' : 'transform'}`}
           ></i>
         </div>
         <div
@@ -51,8 +58,14 @@ class Share extends React.Component {
             className={`share__content__button ${activateButton}`}
             onClick={this.fetchInfoChild}
           >
-            <i className="far fa-address-card"></i>
-            <span>CREAR TARJETA</span>
+            <i
+              className={
+                this.props.isGolden
+                  ? 'fas fa-envelope-open-text'
+                  : 'far fa-address-card'
+              }
+            ></i>
+            <span> CREAR TARJETA</span>
           </button>
 
           <div className={`share__content__error ${hideErrorMessage}`}>

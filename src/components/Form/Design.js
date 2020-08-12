@@ -23,13 +23,20 @@ class Design extends React.Component {
           onClick={this.clickHandlerChild}
         >
           <div className="content__title">
-            <i className="icon far fa-object-ungroup"></i>
-            <h2 className="titleMenu">Diseña</h2>
+            <i
+              className={
+                this.props.isGolden
+                  ? 'fontawesome fas fa-drafting-compass'
+                  : 'icon far fa-object-ungroup'
+              }
+            ></i>
+
+            <h2 className="titleMenu golden_title">Diseña</h2>
           </div>
           <i
-            className={`fa fa-chevron-down ${
-              this.props.isOpen === this.props.id ? '' : 'transform'
-            }`}
+            className={`${
+              this.props.isGolden ? 'fas fa-glasses' : 'fa fa-chevron-down'
+            } ${this.props.isOpen === this.props.id ? '' : 'transform'}`}
           ></i>
         </div>
         <div

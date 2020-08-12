@@ -150,7 +150,7 @@ class Card extends React.Component {
           isGolden={this.state.isGolden}
         />
         <main className={`main ${this.state.isGolden ? 'golden' : ''}`}>
-          <div className="wrapper">
+          <div className='wrapper'>
             <PreviewCard
               objectInfo={objectInfo}
               avatar={profile.avatar}
@@ -167,6 +167,7 @@ class Card extends React.Component {
               isAvatarDefault={isAvatarDefault}
               updateAvatar={this.updateAvatar}
               stateData={this.state}
+              isGolden={this.state.isGolden}
             />
           </div>
         </main>

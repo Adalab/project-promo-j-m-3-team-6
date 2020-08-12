@@ -14,7 +14,9 @@
       color: $color-primary-golden;
     }
   }
-
+  .content__title {
+    font-family: $font-golden-title;
+  }
   .design__content__title {
     color: $color-dark;
   }
@@ -37,18 +39,9 @@
   .section__card {
     background-image: url('https://www.fabricsandpapers.com/media/catalog/product/cache/dd7295f9c8e1f63cd0651955a72a9820/v/i/vintage-floral-fabric-vintage.jpg');
   }
-  .fa-object-ungroup {
-    color: $color-primary-golden !important;
-  }
-  .fa-keyboard-o {
-    color: $color-primary-golden;
-  }
-  .fa-share-alt {
-    color: $color-primary-golden !important;
-  }
 
-  .fa {
-    color: $color-primary-golden;
+  .fontawesome {
+    color: rgb(182, 0, 0);
   }
 
   .get-avatar__trigger,

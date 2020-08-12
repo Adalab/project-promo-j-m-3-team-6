@@ -22,17 +22,18 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form className="form">
+      <form className='form'>
         <Design
-          id="collapsible-1"
+          id='collapsible-1'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
           objectInfo={this.props.objectInfo}
+          isGolden={this.props.isGolden}
         />
 
         <Fill
-          id="collapsible-2"
+          id='collapsible-2'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
@@ -40,18 +41,20 @@ class Form extends React.Component {
           avatar={this.props.avatar}
           isAvatarDefault={this.props.isAvatarDefault}
           updateAvatar={this.props.updateAvatar}
+          isGolden={this.props.isGolden}
         />
 
         <Share
           fetchInfo={this.props.fetchInfo}
           validateInfo={this.props.validateInfo}
           hideMessage={this.props.hideMessage}
-          id="collapsible-3"
+          id='collapsible-3'
           collapsibleHandler={this.collapsibleHandler}
           isOpen={this.state.isOpen}
           objectHandler={this.props.objectHandler}
           objectInfo={this.props.objectInfo}
           stateData={this.props.stateData}
+          isGolden={this.props.isGolden}
         />
       </form>
     );

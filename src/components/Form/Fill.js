@@ -25,14 +25,20 @@ class Fill extends React.Component {
           onClick={this.clickHandlerChild}
         >
           <div className="content__title">
-            <i className="fa fa-keyboard-o" aria-hidden="true"></i>
-            <h2 className="text">Rellena</h2>
+            <i
+              className={
+                this.props.isGolden
+                  ? 'fontawesome fas fa-pen-fancy'
+                  : 'far fa-keyboard'
+              }
+            ></i>
+
+            <h2 className="text golden_title">Rellena</h2>
           </div>
           <i
-            className={`fa fa-chevron-down ${
-              this.props.isOpen === this.props.id ? '' : 'transform'
-            }`}
-            aria-hidden="true"
+            className={`${
+              this.props.isGolden ? 'fas fa-glasses' : 'fa fa-chevron-down'
+            } ${this.props.isOpen === this.props.id ? '' : 'transform'}`}
           ></i>
         </div>
         <div
